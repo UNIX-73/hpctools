@@ -14,6 +14,10 @@ CFLAGS=-Iutils
 #LDLIBS=-qmkl=sequential -lmkl_intel_lp64
 
 dgesv: dgesv.o timer.o main.o
+	$(CC) -o $@ $^ $(LDLIBS)
 
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
+	
 clean:
 	$(RM) dgesv *.o *~
