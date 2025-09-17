@@ -39,28 +39,20 @@ int my_dgesv(int n, int nrhs, double *a, double *b)
 
 					a[pos_i] = (mul * a[pos_i]) + a[top_i];
 				}
-				b[row] = (mul * b[row]) + b[row];
+				b[row] = (mul * b[row]) + b[row]; //TODO: nrhs
 			}
 		}
 	}
 
 	print_matrix(a, n);
 
-	double test[n * n];
-	for (size_t i = 0; i < n * n; i++)
-	{
-		if (i % n == 0)
-		{
-			static size_t t = 0;
-
-			test[i] = b[t++];
-		}
-	}
-
 	printf("b->\n");
-	print_matrix(test, n);
+	print_vec(b, n);
 
-	// Resolver valores
+	resolve_gauss_triangle(n, nrhs, a, b);
+
+	printf("res->\n");
+	print_vec(b, n);
 
 	return 0;
 }
