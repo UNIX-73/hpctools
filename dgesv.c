@@ -3,15 +3,30 @@
 
 int my_dgesv(int n, int nrhs, double *a, double *b)
 {
-	int i = 0;
+	print_matrix(a, n);
+	printf("---\n\n");
 
-	for (uint32_t row = 0; row < n; row++)
+	for (size_t col = 0; col < n; col++)
 	{
-		for (uint32_t col = 0; col < row; col++)
-		{
-			size_t pos = get_pos_idx(n, row, col);
+		double top_val = a[col];
 
-			a[pos] = i--;
+		for (size_t row = 0; row < n; row++)
+		{
+			if (row > col)
+			{
+				size_t pos = get_pos_idx(n, row, col);
+
+				double pos_val = a[pos];
+
+				double mul = -(top_val / pos_val);
+
+				for (size_t i = 0; i < n; i++)
+				{
+					//TODO: resultado de la linea
+				}
+
+				a[pos] = (mul * a[pos]) + a[col]; // Eso por pos
+			}
 		}
 	}
 
