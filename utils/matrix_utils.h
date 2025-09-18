@@ -1,6 +1,9 @@
 #pragma once
 #include <stdio.h>
 #include <stddef.h>
+#include <stdbool.h>
+#include <math.h>
+#include <stdint.h>
 
 static inline size_t m_idx(size_t n, size_t row, size_t col)
 {
@@ -61,6 +64,33 @@ static inline void resolve_triangle_matrix(size_t n, size_t nrhs, double *a, dou
 
             b[m_idx(nrhs, row, rhs)] = (b[m_idx(nrhs, row, rhs)] - constant) / denominator;
         }
+
+#ifdef DEBUG
         printf("[B] row(%d) val(%.5f)  \n", row, b[row]);
+#endif
     }
+}
+
+static inline uint32_t compare_results_divergence(size_t n, double *m1, double *m2)
+{
+
+    for (double power = 0.0; power <= 19; power++)
+    {
+        double diff = pow(10.0, -((double)power));
+
+        for (size_t i = 0; i < n; i++)
+        {
+            for (size_t j = 0; j < n; j++)
+            {
+                double v = m1[m_idx(n, i, j)] - m2[m_idx(n, i, j)];
+
+                if (fabs(v) > diff)
+                {
+                    printf("The result differs by at least 10^e-%d\n", power);
+                    return 1;
+                }
+            }
+        }
+    }
+    return 0;
 }

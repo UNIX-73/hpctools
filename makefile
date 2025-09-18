@@ -1,7 +1,7 @@
 # Default Lapacke: Openblas at CESGA
 CC=gcc
-LDLIBS=-lopenblas
-CFLAGS=-Iutils
+LDLIBS=-lopenblas -lm
+CFLAGS=-Iutils -DEXTRA_TESTING
 
 # Other systems (my Debian boxes, for example)
 #LDLIBS=-llapacke

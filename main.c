@@ -98,16 +98,23 @@ int main(int argc, char *argv[])
   timestamp(&now);
   printf("Time taken by my dgesv solver: %ld ms\n", diff_milli(&start, &now));
 
+#ifdef DEBUG
   printf("LAPACKE B->\n");
   print_vec(bref, n * nrhs);
 
   printf("MY_DGESV B->\n");
   print_vec(b, n * nrhs);
+#endif
 
   if (check_result(bref, b, size) == 1)
     printf("Result is ok!\n");
   else
+  {
     printf("Result is wrong!\n");
 
+#ifdef EXTRA_TESTING
+    compare_results_divergence(n, b, bref);
+#endif
+  }
   return 0;
 }

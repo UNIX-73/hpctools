@@ -3,14 +3,16 @@
 
 static const double EPSILON = 1e-10;
 
-int my_dgesv(int n, int nrhs, double *a, double *b)
+int my_dgesv(size_t n, size_t nrhs, double *a, double *b)
 {
+#ifdef DEBUG
 	printf("a-->\n");
 	print_matrix(a, n);
 	printf("----\n");
 
 	printf("b-->\n");
 	print_vec(b, n);
+#endif
 
 	for (size_t col = 0; col < n; col++)
 	{
@@ -19,9 +21,6 @@ int my_dgesv(int n, int nrhs, double *a, double *b)
 
 		for (size_t row = col + 1; row < n; row++)
 		{
-			if (a[m_idx(n, row, col)] == 0.0)
-				continue;
-
 			double piv2 = a[m_idx(n, row, col)];
 
 			double mul = (piv2 / piv1);
@@ -32,12 +31,6 @@ int my_dgesv(int n, int nrhs, double *a, double *b)
 			for (size_t i = 0; i < n - col; i++)
 			{
 				double result = mul * a[piv1_i + i];
-
-				/*
-				printf("[%.1f] -> (%.2f) - ", a[pos1_idx + i], -result);
-				printf("[row(%d) col(%d) i(%d) mul(%.2f) piv1(%.2f) piv2(%.2f)]\n", row, col, i, mul, piv1, piv2);
-				*/
-
 				a[pos_a1_idx + i] -= result;
 			}
 			// b
@@ -50,6 +43,7 @@ int my_dgesv(int n, int nrhs, double *a, double *b)
 		}
 	}
 
+#ifdef DEBUG
 	printf("nrhs(%d)", nrhs);
 	printf("a1-->\n");
 	print_matrix(a, n);
@@ -60,16 +54,22 @@ int my_dgesv(int n, int nrhs, double *a, double *b)
 		print_vec(&b[n * i], n);
 	}
 
+#endif
+
 	resolve_triangle_matrix(n, nrhs, a, b);
+
+#ifdef DEBUG
 	printf("b2-->\n");
 	for (size_t i = 0; i < nrhs; i++)
 	{
 		print_vec(&b[n * i], n);
 	}
+#endif
 
 	return 0;
 }
 
+/*
 int my_dgesv_old(int n, int nrhs, double *a, double *b)
 {
 	printf("a-->");
@@ -129,3 +129,4 @@ int my_dgesv_old(int n, int nrhs, double *a, double *b)
 
 	return 0;
 }
+*/
