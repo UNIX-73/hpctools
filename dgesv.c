@@ -14,8 +14,8 @@ int my_dgesv(int n, int nrhs, double *a, double *b)
 
 	for (size_t col = 0; col < n; col++)
 	{
-		size_t piv_i = get_pos_idx(n, col, col);
-		double piv1 = a[piv_i];
+		size_t piv1_i = get_pos_idx(n, col, col);
+		double piv1 = a[piv1_i];
 
 		for (size_t row = col + 1; row < n; row++)
 		{
@@ -26,25 +26,46 @@ int my_dgesv(int n, int nrhs, double *a, double *b)
 
 			double mul = (piv2 / piv1);
 
-			size_t pos1_idx = get_pos_idx(n, row, col);
+			size_t pos_a1_idx = get_pos_idx(n, row, col);
 
+			// a
 			for (size_t i = 0; i < n - col; i++)
 			{
-				size_t pos1_top_idx = get_pos_idx(n, col, col + i);
+				double result = mul * a[piv1_i + i];
 
-				double result = mul * a[pos1_top_idx];
-
+				/*
 				printf("[%.1f] -> (%.2f) - ", a[pos1_idx + i], -result);
 				printf("[row(%d) col(%d) i(%d) mul(%.2f) piv1(%.2f) piv2(%.2f)]\n", row, col, i, mul, piv1, piv2);
+				*/
 
-				a[pos1_idx + i] -= result;
+				a[pos_a1_idx + i] -= result;
 			}
-
-			print_matrix(a, n);
+			// b
+			for (size_t j = 0; j < nrhs; j++)
+			{
+				size_t pos_b1_idx = j * n + row; // idx del row de b
+				size_t pos_b2_idx = j * n + col; // idx del piv de b
+				b[pos_b1_idx] -= mul * b[pos_b2_idx];
+			}
 		}
 	}
+
+	printf("nrhs(%d)", nrhs);
 	printf("a1-->\n");
 	print_matrix(a, n);
+
+	printf("b1-->\n");
+	for (size_t i = 0; i < nrhs; i++)
+	{
+		print_vec(&b[n * i], n);
+	}
+
+	resolve_triangle_matrix(n, nrhs, a, b);
+	printf("b2-->\n");
+	for (size_t i = 0; i < nrhs; i++)
+	{
+		print_vec(&b[n * i], n);
+	}
 
 	return 0;
 }

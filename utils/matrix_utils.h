@@ -31,12 +31,38 @@ static inline void print_vec(double *vec, size_t n)
 {
     for (size_t i = 0; i < n; i++)
     {
-        printf("%.1f, ", vec[i]);
+        printf("%.9f, ", vec[i]);
     }
     printf("\n");
 }
 
 static inline void resolve_triangle_matrix(size_t n, size_t nrhs, double *a, double *b)
+{
+    size_t n_minus1 = n - 1;
+
+    for (size_t i = 0; i < n; i++) // Row+
+    {
+        size_t row = n_minus1 - i;
+
+        double denominator = a[get_pos_idx(n, row, row)];
+        double constant = 0.0;
+
+        for (size_t j = 0; (j < n) && (j < i); j++) // Itera solo por los valores resueltos de la constante
+        {
+            size_t col = n_minus1 - j;
+
+            double constant_mul = a[get_pos_idx(n, row, col)];
+            double constant_resolved = b[col];
+            constant += constant_mul * constant_resolved;
+        }
+
+        b[row] = (b[row] - constant) / denominator;
+
+        printf("[B] row(%d) val(%.5f) const(%.3f) \n", row, b[row], constant);
+    }
+}
+
+static inline void old_resolve_triangle_matrix(size_t n, size_t nrhs, double *a, double *b)
 {
     size_t n_minus_1 = n - 1;
     double test[n];
@@ -72,5 +98,5 @@ static inline void resolve_triangle_matrix(size_t n, size_t nrhs, double *a, dou
         test[row] = denominator;
     }
 
-    //print_vec(test, n);
+    // print_vec(test, n);
 }
