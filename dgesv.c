@@ -14,19 +14,19 @@ int my_dgesv(int n, int nrhs, double *a, double *b)
 
 	for (size_t col = 0; col < n; col++)
 	{
-		size_t piv1_i = get_pos_idx(n, col, col);
+		size_t piv1_i = m_idx(n, col, col);
 		double piv1 = a[piv1_i];
 
 		for (size_t row = col + 1; row < n; row++)
 		{
-			if (a[get_pos_idx(n, row, col)] == 0.0)
+			if (a[m_idx(n, row, col)] == 0.0)
 				continue;
 
-			double piv2 = a[get_pos_idx(n, row, col)];
+			double piv2 = a[m_idx(n, row, col)];
 
 			double mul = (piv2 / piv1);
 
-			size_t pos_a1_idx = get_pos_idx(n, row, col);
+			size_t pos_a1_idx = m_idx(n, row, col);
 
 			// a
 			for (size_t i = 0; i < n - col; i++)
@@ -43,8 +43,8 @@ int my_dgesv(int n, int nrhs, double *a, double *b)
 			// b
 			for (size_t j = 0; j < nrhs; j++)
 			{
-				size_t pos_b1_idx = j * n + row; // idx del row de b
-				size_t pos_b2_idx = j * n + col; // idx del piv de b
+				size_t pos_b1_idx = row * nrhs + j; // idx del row de b
+				size_t pos_b2_idx = col * nrhs + j; // idx del piv de b
 				b[pos_b1_idx] -= mul * b[pos_b2_idx];
 			}
 		}
@@ -98,7 +98,7 @@ int my_dgesv_old(int n, int nrhs, double *a, double *b)
 		{
 			if (row > col)
 			{
-				size_t pos = get_pos_idx(n, row, col);
+				size_t pos = m_idx(n, row, col);
 				double pos_val = a[pos];
 
 				double mul = -(top_val / pos_val);

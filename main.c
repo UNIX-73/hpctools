@@ -1,6 +1,6 @@
-//#include <lapacke.h>
+// #include <lapacke.h>
 #include <openblas/lapacke.h>
-//#include <mkl_lapacke.h>
+// #include <mkl_lapacke.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
@@ -9,14 +9,17 @@
 #include "timer.h"
 #include "dgesv.h"
 
+#include <matrix_utils.h>
+
 double *generate_matrix(unsigned int size, unsigned int seed)
 {
   unsigned int i;
-  double *matrix = (double *) malloc(sizeof(double) * size * size);
+  double *matrix = (double *)malloc(sizeof(double) * size * size);
 
   srand(seed);
 
-  for (i = 0; i < size * size; i++) {
+  for (i = 0; i < size * size; i++)
+  {
     matrix[i] = rand() % 100;
   }
 
@@ -25,9 +28,9 @@ double *generate_matrix(unsigned int size, unsigned int seed)
 
 double *duplicate_matrix(double *orig, unsigned int size)
 {
-  double *replica = (double *) malloc(sizeof(double) * size * size);
+  double *replica = (double *)malloc(sizeof(double) * size * size);
 
-  memcpy((void *) replica, (void *) orig, size * size * sizeof(double));
+  memcpy((void *)replica, (void *)orig, size * size * sizeof(double));
 
   return replica;
 }
@@ -43,7 +46,8 @@ unsigned int check_result(double *bref, double *b, unsigned int size)
 {
   unsigned int i;
 
-  for(i = 0; i < size*size; i++) {
+  for (i = 0; i < size * size; i++)
+  {
     if (!is_nearly_equal(bref[i], b[i]))
       return 0;
   }
@@ -53,7 +57,8 @@ unsigned int check_result(double *bref, double *b, unsigned int size)
 
 int main(int argc, char *argv[])
 {
-  if (argc < 2) {
+  if (argc < 2)
+  {
     printf("You need to provide a matrix size (e.g. 1024 for use 1024x1024 matrices)\n");
 
     return 1;
@@ -69,12 +74,11 @@ int main(int argc, char *argv[])
   aref = duplicate_matrix(a, size);
   bref = duplicate_matrix(b, size);
 
-
   //
   // Using LAPACK dgesv OpenBLAS implementation to solve the system
   //
   int n = size, nrhs = size, lda = size, ldb = size, info;
-  int *ipiv = (int *) malloc(sizeof(int) * size);
+  int *ipiv = (int *)malloc(sizeof(int) * size);
 
   timeinfo start, now;
   timestamp(&start);
@@ -83,7 +87,6 @@ int main(int argc, char *argv[])
 
   timestamp(&now);
   printf("Time taken by Lapacke dgesv: %ld ms\n", diff_milli(&start, &now));
-
 
   //
   // Using your own solver based on Gauss or Gauss-Jordan elimination
@@ -94,6 +97,12 @@ int main(int argc, char *argv[])
 
   timestamp(&now);
   printf("Time taken by my dgesv solver: %ld ms\n", diff_milli(&start, &now));
+
+  printf("LAPACKE B->\n");
+  print_vec(bref, n * nrhs);
+
+  printf("MY_DGESV B->\n");
+  print_vec(b, n * nrhs);
 
   if (check_result(bref, b, size) == 1)
     printf("Result is ok!\n");
