@@ -21,7 +21,7 @@ static inline void print_matrix(double *matrix, size_t n)
     {
         for (size_t col = 0; col < n; col++)
         {
-            printf("%.1f, ", matrix[get_pos_idx(n, row, col)]);
+            printf("%.2f, ", matrix[get_pos_idx(n, row, col)]);
         }
         printf("\n");
     }
@@ -36,32 +36,41 @@ static inline void print_vec(double *vec, size_t n)
     printf("\n");
 }
 
-static inline void resolve_gauss_triangle(size_t n, size_t nrhs, double *a, double *b)
+static inline void resolve_triangle_matrix(size_t n, size_t nrhs, double *a, double *b)
 {
     size_t n_minus_1 = n - 1;
-
     double test[n];
 
-    for (size_t row = 0; row < n; row++)
+    for (size_t i = 0; i < n; i++)
     {
-        size_t inv_row = n_minus_1 - row;
+        size_t row = n_minus_1 - i;
 
         double denominator;
-        double accumulator = 0;
+        double accumulator = 0.0;
+        double constant = b[row];
 
-        for (size_t col = 0; col < n; col++)
+        // Saca el accumulator y denominator
+        for (size_t j = 0; ((j < n) && (j <= i)); j++)
         {
-            size_t inv_col = n_minus_1 - col;
+            size_t col = n_minus_1 - j;
+            size_t pos_idx = get_pos_idx(n, row, col);
 
-            if (inv_col == inv_row)
+            if (col == row)
             {
-                printf("row(%d) col(%d)\n", inv_col, inv_row);
-                denominator = a[get_pos_idx(n, inv_row, inv_col)];
+                denominator = a[pos_idx];
+            }
+            else
+            {
+                double multiplier = a[pos_idx];
+                double resolved = b[col + 1]; // No debería llegar aqui en el primer iter del row porque !(col <= row)
+                accumulator += multiplier * resolved;
             }
         }
+
+        b[row] = (-accumulator + constant) / denominator;
 
         test[row] = denominator;
     }
 
-    print_vec(test, n);
+    //print_vec(test, n);
 }
