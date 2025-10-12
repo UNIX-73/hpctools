@@ -1,6 +1,8 @@
 {
     "files.associations": {
         "matrix.h": "c",
-        "matrix_utils.h": "c"
+        "matrix_utils.h": "c",
+        "random": "c",
+        "dgesv.h": "c"
     }
 }

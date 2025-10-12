@@ -1,5 +1,6 @@
 #include "dgesv.h"
 #include <matrix_utils.h>
+#include <math.h>
 
 static const double EPSILON = 1e-10;
 
@@ -16,8 +17,48 @@ int my_dgesv(size_t n, size_t nrhs, double *a, double *b)
 
 	for (size_t col = 0; col < n; col++)
 	{
+#ifdef ROW_SWAPPING
+		// Buscar pivote máximo en la columna
+		size_t piv_row = col;
+		double max_val = fabs(a[m_idx(n, col, col)]);
+		for (size_t row = col + 1; row < n; row++)
+		{
+			double val = fabs(a[m_idx(n, row, col)]);
+			if (val > max_val)
+			{
+				max_val = val;
+				piv_row = row;
+			}
+		}
+
+		// Intercambiar filas si es necesario
+		if (piv_row != col)
+		{
+			for (size_t k = 0; k < n; k++)
+			{
+				double tmp = a[m_idx(n, col, k)];
+				a[m_idx(n, col, k)] = a[m_idx(n, piv_row, k)];
+				a[m_idx(n, piv_row, k)] = tmp;
+			}
+
+			// Intercambiar también B
+			for (size_t j = 0; j < nrhs; j++)
+			{
+				double tmpb = b[col * nrhs + j];
+				b[col * nrhs + j] = b[piv_row * nrhs + j];
+				b[piv_row * nrhs + j] = tmpb;
+			}
+		}
+#endif
+
 		size_t piv1_i = m_idx(n, col, col);
 		double piv1 = a[piv1_i];
+
+		if (fabs(piv1) < EPSILON)
+		{
+			fprintf(stderr, "ERR: Almost null pivot in col %d\n", col);
+			return -1;
+		}
 
 		for (size_t row = col + 1; row < n; row++)
 		{
@@ -68,65 +109,3 @@ int my_dgesv(size_t n, size_t nrhs, double *a, double *b)
 
 	return 0;
 }
-
-/*
-int my_dgesv_old(int n, int nrhs, double *a, double *b)
-{
-	printf("a-->");
-	print_matrix(a, n);
-	printf("----\n");
-
-	printf("b-->");
-	print_vec(b, n);
-
-	for (size_t i = 0; i < n; i++)
-	{
-		double v = a[i];
-		if (v < 0) // abs(v)
-			v = -v;
-
-		if (v <= EPSILON)
-			return -1;
-	}
-
-	// Dejar triangulo
-	for (size_t col = 0; col < n; col++)
-	{
-		double top_val = a[col];
-
-		for (size_t row = 0; row < n; row++)
-		{
-			if (row > col)
-			{
-				size_t pos = m_idx(n, row, col);
-				double pos_val = a[pos];
-
-				double mul = -(top_val / pos_val);
-				printf("\nMul(%lf)\n", mul);
-
-				for (size_t i = 0; i < n - col; i++)
-				{
-					size_t pos_i = pos + i;
-					size_t top_i = col + i;
-
-					a[pos_i] = (mul * a[pos_i]) + a[top_i];
-				}
-				b[row] = (mul * b[row]) + b[row]; // TODO: nrhs
-			}
-		}
-	}
-
-	printf("a1-->\n");
-	print_matrix(a, n);
-
-	printf("b1->\n");
-	print_vec(b, n);
-
-	resolve_triangle_matrix(n, nrhs, a, b);
-
-	printf("res(b)->\n");
-	print_vec(b, n);
-
-	return 0;
-}
-*/
