@@ -24,7 +24,9 @@ for compiler_tag in defs.compilers.keys():
 
             for m_size in matrix_sizes:
                 for i in range(5):
-                    print(f"▶️ Running [{exe_name}] - Size {m_size} - Iter {i + 1}/5")
+                    print(
+                        f"--> Running [{os.path.join(compiler_tag, o_tag, exe_name)}] - Size {m_size} - Iter {i + 1}/5"
+                    )
                     result = subprocess.run(
                         [exe_path, m_size],
                         check=True,
@@ -53,4 +55,4 @@ output_path = os.path.join(defs.build_dir, "benchmark_results.json")
 with open(output_path, "w") as f:
     json.dump(results, f, indent=4)
 
-print(f"✅ Results saved to {output_path}")
+print(f":) Results saved to {output_path}")
