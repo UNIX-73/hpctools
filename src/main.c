@@ -13,108 +13,108 @@
 
 double *generate_matrix(unsigned int size, unsigned int seed)
 {
-  unsigned int i;
-  double *matrix = (double *)malloc(sizeof(double) * size * size);
+	unsigned int i;
+	double *matrix = (double *)malloc(sizeof(double) * size * size);
 
-  srand(seed);
+	srand(seed);
 
-  for (i = 0; i < size * size; i++)
-  {
-    matrix[i] = rand() % 100;
-  }
+	for (i = 0; i < size * size; i++)
+	{
+		matrix[i] = rand() % 100;
+	}
 
-  return matrix;
+	return matrix;
 }
 
 double *duplicate_matrix(double *orig, unsigned int size)
 {
-  double *replica = (double *)malloc(sizeof(double) * size * size);
+	double *replica = (double *)malloc(sizeof(double) * size * size);
 
-  memcpy((void *)replica, (void *)orig, size * size * sizeof(double));
+	memcpy((void *)replica, (void *)orig, size * size * sizeof(double));
 
-  return replica;
+	return replica;
 }
 
 int is_nearly_equal(double x, double y)
 {
-  const double epsilon = 1e-5 /* some small number */;
-  return fabs(x - y) <= epsilon * fabs(x);
-  // see Knuth section 4.2.2 pages 217-218
+	const double epsilon = 1e-5 /* some small number */;
+	return fabs(x - y) <= epsilon * fabs(x);
+	// see Knuth section 4.2.2 pages 217-218
 }
 
 unsigned int check_result(double *bref, double *b, unsigned int size)
 {
-  unsigned int i;
+	unsigned int i;
 
-  for (i = 0; i < size * size; i++)
-  {
-    if (!is_nearly_equal(bref[i], b[i]))
-      return 0;
-  }
+	for (i = 0; i < size * size; i++)
+	{
+		if (!is_nearly_equal(bref[i], b[i]))
+			return 0;
+	}
 
-  return 1;
+	return 1;
 }
 
 int main(int argc, char *argv[])
 {
-  if (argc < 2)
-  {
-    printf("You need to provide a matrix size (e.g. 1024 for use 1024x1024 matrices)\n");
+	if (argc < 2)
+	{
+		printf("You need to provide a matrix size (e.g. 1024 for use 1024x1024 matrices)\n");
 
-    return 1;
-  }
+		return 1;
+	}
 
-  int size = atoi(argv[1]);
+	int size = atoi(argv[1]);
 
-  double *a, *aref;
-  double *b, *bref;
+	double *a, *aref;
+	double *b, *bref;
 
-  a = generate_matrix(size, 1);
-  b = generate_matrix(size, 2);
-  aref = duplicate_matrix(a, size);
-  bref = duplicate_matrix(b, size);
+	a = generate_matrix(size, 1);
+	b = generate_matrix(size, 2);
+	aref = duplicate_matrix(a, size);
+	bref = duplicate_matrix(b, size);
 
-  //
-  // Using LAPACK dgesv OpenBLAS implementation to solve the system
-  //
-  int n = size, nrhs = size, lda = size, ldb = size, info;
-  int *ipiv = (int *)malloc(sizeof(int) * size);
+	//
+	// Using LAPACK dgesv OpenBLAS implementation to solve the system
+	//
+	int n = size, nrhs = size, lda = size, ldb = size, info;
+	int *ipiv = (int *)malloc(sizeof(int) * size);
 
-  timeinfo start, now;
-  timestamp(&start);
+	timeinfo start, now;
+	timestamp(&start);
 
-  info = LAPACKE_dgesv(LAPACK_ROW_MAJOR, n, nrhs, aref, lda, ipiv, bref, ldb);
+	info = LAPACKE_dgesv(LAPACK_ROW_MAJOR, n, nrhs, aref, lda, ipiv, bref, ldb);
 
-  timestamp(&now);
-  printf("Time taken by Lapacke dgesv: %ld ms\n", diff_milli(&start, &now));
+	timestamp(&now);
+	printf("Time taken by Lapacke dgesv: %ld ms\n", diff_milli(&start, &now));
 
-  //
-  // Using your own solver based on Gauss or Gauss-Jordan elimination
-  //
-  timestamp(&start);
+	//
+	// Using your own solver based on Gauss or Gauss-Jordan elimination
+	//
+	timestamp(&start);
 
-  info = my_dgesv(n, nrhs, a, b /* add/change the parameters according to your implementation needs */);
+	info = my_dgesv(n, nrhs, a, b /* add/change the parameters according to your implementation needs */);
 
-  timestamp(&now);
-  printf("Time taken by my dgesv solver: %ld ms\n", diff_milli(&start, &now));
+	timestamp(&now);
+	printf("Time taken by my dgesv solver: %ld ms\n", diff_milli(&start, &now));
 
 #ifdef DEBUG
-  printf("LAPACKE B->\n");
-  print_vec(bref, n * nrhs);
+	printf("LAPACKE B->\n");
+	print_vec(bref, n * nrhs);
 
-  printf("MY_DGESV B->\n");
-  print_vec(b, n * nrhs);
+	printf("MY_DGESV B->\n");
+	print_vec(b, n * nrhs);
 #endif
 
-  if (check_result(bref, b, size) == 1)
-    printf("Result is ok!\n");
-  else
-  {
-    printf("Result is wrong!\n");
+	if (check_result(bref, b, size) == 1)
+		printf("Result is ok!\n");
+	else
+	{
+		printf("Result is wrong!\n");
 
 #ifdef EXTRA_TESTING
-    compare_results_divergence(n, b, bref);
+		compare_results_divergence(n, b, bref);
 #endif
-  }
-  return 0;
+	}
+	return 0;
 }

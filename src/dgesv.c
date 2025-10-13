@@ -56,7 +56,7 @@ int my_dgesv(size_t n, size_t nrhs, double *a, double *b)
 
 		if (fabs(piv1) < EPSILON)
 		{
-			fprintf(stderr, "ERR: Almost null pivot in col %d\n", col);
+			fprintf(stderr, "ERR: Almost null pivot in col %ld\n", col);
 			return -1;
 		}
 

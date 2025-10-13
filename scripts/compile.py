@@ -1,45 +1,18 @@
 import os
 import subprocess
+import definitions as defs
 
-script_dir = os.path.dirname(os.path.abspath(__file__))
-root_dir = os.path.realpath(os.path.join(script_dir, ".."))  # normaliza ../
-build_dir = os.path.join(root_dir, "build")
-
-compilers = {
-    "gcc_8_4_0": "gcc-8.4.0",
-    "gcc_10_1_0": "gcc-10.1.0",
-    "gcc_11_4_0": "gcc",
-}
-
-modules = {
-    "gcc_8_4_0": "module load cesga/2020",
-    "gcc_10_1_0": "module load cesga/2020",
-    "gcc_11_4_0": "module load cesga/2025",
-}
-
-optimization_flags = {
-    "O0": "-O0",
-    "O1": "-O1",
-    "O2": "-O2",
-    "O3": "-O3",
-    "Ofast": "-Ofast",
-}
-
-row_swapping = {
-    "": "",
-    "rs": "-DROW_SWAPPING",
-}
 
 # Make compile dirs if they dont exist
-for compiler_tag in compilers.keys():
-    for flag in optimization_flags.keys():
-        os.makedirs(os.path.join(build_dir, compiler_tag, flag), exist_ok=True)
+for compiler_tag in defs.compilers.keys():
+    for flag in defs.optimization_flags.keys():
+        os.makedirs(os.path.join(defs.build_dir, compiler_tag, flag), exist_ok=True)
 
 # .c and .h files
 c_files = []
 include_dirs = set()
 
-for dirpath, dirnames, filenames in os.walk(root_dir):
+for dirpath, dirnames, filenames in os.walk(defs.root_dir):
     for filename in filenames:
         full_path = os.path.realpath(os.path.join(dirpath, filename))
         if filename.endswith(".c"):
@@ -51,15 +24,23 @@ for dirpath, dirnames, filenames in os.walk(root_dir):
 include_flags = [f"-I{d}" for d in include_dirs]
 link_flags = ["-lm", "-lopenblas"]
 
-for compiler_tag, compiler_name in compilers.items():
-    for o_tag, o_flag in optimization_flags.items():
-        for rs_tag, rs_flag in row_swapping.items():
-            output_dir = os.path.join(build_dir, compiler_tag, o_tag)
+for compiler_tag, compiler_name in defs.compilers.items():
+    for o_tag, o_flag in defs.optimization_flags.items():
+        for rs_tag, rs_flag in defs.row_swapping.items():
+            output_dir = os.path.join(defs.build_dir, compiler_tag, o_tag)
+
+            # paths
             output_file = os.path.join(
                 output_dir,
                 f"dgesv{('_' + rs_tag) if rs_tag else ''}",
             )
 
+            log_file = os.path.join(
+                output_dir,
+                f"compile_logs{('_' + rs_tag) if rs_tag else ''}.log",
+            )
+
+            # compilation
             cmd = [compiler_name] + c_files + [o_flag] + include_flags
             if rs_flag:
                 cmd.append(rs_flag)
@@ -67,8 +48,9 @@ for compiler_tag, compiler_name in compilers.items():
             cmd += link_flags
 
             print("Compiling:", f" ".join(cmd))
-            module_cmd = modules.get(compiler_tag)  # ej: "module load cesga/2020"
-            compile_cmd = " ".join(cmd)  # el comando gcc completo
+            module_cmd = defs.modules.get(compiler_tag)
+            compile_cmd = " ".join(cmd)
 
-            full_cmd = f"{module_cmd} && {compile_cmd}"
+            full_cmd = f"{module_cmd} && {compile_cmd} > {log_file} 2>&1"
+
             subprocess.run(["bash", "-lc", full_cmd], check=True)
