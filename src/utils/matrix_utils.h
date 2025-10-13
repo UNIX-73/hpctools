@@ -86,7 +86,7 @@ static inline uint32_t compare_results_divergence(size_t n, double *m1, double *
 
                 if (fabs(v) > diff)
                 {
-                    printf("The result differs by at least 10^e-%d\n", power);
+                    printf("The result differs by at least 10^e-%f\n", power);
                     return 1;
                 }
             }

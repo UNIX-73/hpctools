@@ -48,16 +48,10 @@ for dirpath, dirnames, filenames in os.walk(root_dir):
             include_dirs.add(dirpath)
 
 
-include_flags = [f"-I{d}" for d in include_dirs] + [
-    "-lm",
-    "-lopenblas",
-]
+include_flags = [f"-I{d}" for d in include_dirs]
+link_flags = ["-lm", "-lopenblas"]
 
 for compiler_tag, compiler_name in compilers.items():
-    subprocess.run(
-        modules.get(compiler_tag),
-        check=True,
-    )
     for o_tag, o_flag in optimization_flags.items():
         for rs_tag, rs_flag in row_swapping.items():
             output_dir = os.path.join(build_dir, compiler_tag, o_tag)
@@ -70,6 +64,11 @@ for compiler_tag, compiler_name in compilers.items():
             if rs_flag:
                 cmd.append(rs_flag)
             cmd += ["-o", output_file]
+            cmd += link_flags
 
-            print("Compiling:", " ".join(cmd))
-            subprocess.run(cmd, check=True)
+            print("Compiling:", f" ".join(cmd))
+            module_cmd = modules.get(compiler_tag)  # ej: "module load cesga/2020"
+            compile_cmd = " ".join(cmd)  # el comando gcc completo
+
+            full_cmd = f"{module_cmd} && {compile_cmd}"
+            subprocess.run(["bash", "-lc", full_cmd], check=True)
