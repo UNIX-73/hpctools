@@ -6,7 +6,7 @@ import definitions as defs
 import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
-MAX_CORES = 32
+MAX_CORES = 64
 job_start_t = time.time()
 matrix_sizes = ["1024", "2048", "4096"]
 results = {}
