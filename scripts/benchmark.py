@@ -3,6 +3,9 @@ import re
 import json
 import subprocess
 import definitions as defs
+import time
+
+job_start_t = time.time()
 
 matrix_sizes = ["1024", "2048", "4096"]
 results = {}
@@ -26,6 +29,8 @@ for compiler_tag in defs.compilers.keys():
                         f"--> Running [{os.path.join(compiler_tag, o_tag, exe_name)}] - Size {m_size} - Iter {i + 1}/5",
                         flush=True,
                     )
+                    iter_start = time.time()
+
                     result = subprocess.run(
                         [exe_path, m_size],
                         check=True,
@@ -49,6 +54,15 @@ for compiler_tag in defs.compilers.keys():
                     results.setdefault(compiler_tag, {}).setdefault(
                         o_tag, {}
                     ).setdefault(exe_name, {}).setdefault(m_size, []).append(entry)
+
+                    iter_end_t = time.time()
+                    iter_time = iter_end_t - iter_start
+                    total_job_time = iter_end_t - job_start_t
+
+                    print(
+                        f"Iter {i+1}: {entry['times']} / {iter_time:.2f}s / total {total_job_time/60:.2f}min",
+                    )
+
 
 output_path = os.path.join(defs.build_dir, "benchmark_results.json")
 with open(output_path, "w") as f:
