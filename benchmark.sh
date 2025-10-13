@@ -9,5 +9,4 @@
 
 module load cesga/2025
 
-python scripts/compile.py
 python scripts/benchmark.py

@@ -23,7 +23,8 @@ for compiler_tag in defs.compilers.keys():
             for m_size in matrix_sizes:
                 for i in range(5):
                     print(
-                        f"--> Running [{os.path.join(compiler_tag, o_tag, exe_name)}] - Size {m_size} - Iter {i + 1}/5"
+                        f"--> Running [{os.path.join(compiler_tag, o_tag, exe_name)}] - Size {m_size} - Iter {i + 1}/5",
+                        flush=True,
                     )
                     result = subprocess.run(
                         [exe_path, m_size],
