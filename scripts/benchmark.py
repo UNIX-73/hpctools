@@ -18,7 +18,7 @@ def run_benchmark(exe_path, compiler_tag, o_tag, exe_name, m_size, iteration):
     iter_start = time.time()
 
     print(
-        f"--> RUNNING [{os.path.join(compiler_tag, o_tag, exe_name)}] - Size {m_size} - Iter {i + 1}/5",
+        f"--> RUNNING [{os.path.join(compiler_tag, o_tag, exe_name)}] - Size {m_size} - Iter {iteration}/5",
         flush=True,
     )
     result = subprocess.run(
