@@ -20,8 +20,6 @@ for compiler_tag in defs.compilers.keys():
                 print(f"Binary not found: {exe_path}")
                 continue
 
-            bin_results = []
-
             for m_size in matrix_sizes:
                 for i in range(5):
                     print(
@@ -36,20 +34,20 @@ for compiler_tag in defs.compilers.keys():
                     )
 
                     times = time_regex.findall(result.stdout)
-                    if times:
-                        entry = {
-                            "matrix_size": m_size,
-                            "iteration": i + 1,
-                            "times": {name.strip(): int(ms) for name, ms in times},
-                        }
-                        bin_results.append(entry)
-                    else:
+                    if not times:
                         print("No timing info found in output:")
                         print(result.stdout)
+                        continue
 
-            results.setdefault(compiler_tag, {}).setdefault(o_tag, {})[
-                exe_name
-            ] = bin_results
+                    entry = {
+                        "matrix_size": m_size,
+                        "iteration": i + 1,
+                        "times": {name.strip(): int(ms) for name, ms in times},
+                    }
+
+                    results.setdefault(compiler_tag, {}).setdefault(
+                        o_tag, {}
+                    ).setdefault(exe_name, {}).setdefault(m_size, []).append(entry)
 
 output_path = os.path.join(defs.build_dir, "benchmark_results.json")
 with open(output_path, "w") as f:
