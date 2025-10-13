@@ -3,8 +3,8 @@
 #SBATCH --output=job_results.out
 #SBATCH --error=job_results.err
 #SBATCH --time=48:00:00
-#SBATCH --cpus-per-task=1
-#SBATCH --mem=12G
+#SBATCH --cpus-per-task=32
+#SBATCH --mem=32G
 #SBATCH --ntasks=1
 
 module load cesga/2025
