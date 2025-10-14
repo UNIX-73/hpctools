@@ -12,4 +12,4 @@ export OMP_NUM_THREADS=1
 
 module load cesga/2025
 
-python scripts/benchmark.py
+python scripts/benchmark_64c.py

@@ -4,7 +4,7 @@
 #SBATCH --error=job_results_variation.err
 #SBATCH --time=4:00:00
 #SBATCH --cpus-per-task=1
-#SBATCH --mem=8G
+#SBATCH --mem=1G
 
 export OPENBLAS_NUM_THREADS=1 # https://stackoverflow.com/questions/72669579/c-how-to-set-environment-variable-so-openblas-runs-multithreaded
 export OMP_NUM_THREADS=1
