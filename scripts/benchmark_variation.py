@@ -64,8 +64,6 @@ exe_name = "dgesv_rs"
 iterations = 20
 
 
-start_time = time.time()
-
 exe_path = os.path.join(defs.build_dir, compiler, opt, exe_name)
 if not os.path.exists(exe_path):
     raise FileNotFoundError(f"Binary not found: {exe_path}")
@@ -75,6 +73,7 @@ results = {}
 
 for i in range(1, iterations + 1):
     print(f"--> Iteration {i}/{iterations}", flush=True)
+    start_time = time.time()
     result = subprocess.run(
         [exe_path, m_size],
         check=True,
@@ -82,6 +81,7 @@ for i in range(1, iterations + 1):
         stderr=subprocess.PIPE,
         text=True,
     )
+    end_time = time.time()
 
     times = defs.time_regex.findall(result.stdout)
     if not times:
@@ -100,7 +100,7 @@ for i in range(1, iterations + 1):
         }
 
     results[str(i)] = entry
-    print(f"Iteration[{i}] took { time.time() - start_time }s")
+    print(f"Iteration[{i}] took { end_time - start_time }s")
 
 output_path = os.path.join(defs.build_dir, "benchmark_results_variation.json")
 with open(output_path, "w") as f:
