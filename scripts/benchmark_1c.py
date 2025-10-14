@@ -78,7 +78,7 @@ for compiler_tag in defs.compilers.keys():
                     ).setdefault(exe_name, {}).setdefault(m_size, []).append(entry)
 
 
-output_path = os.path.join(defs.build_dir, "benchmark_results_single_threaded.json")
+output_path = os.path.join(defs.build_dir, "benchmark_results_1c.json")
 with open(output_path, "w") as f:
     json.dump(results, f, indent=4)
 
