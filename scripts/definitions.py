@@ -17,12 +17,13 @@ modules = {
     "gcc_11_4_0": "module load cesga/2025",
 }
 
-vector_flags = "-march=native -fno-tree-vectorize -ftree-slp-vectorize"
-vector_info_flags = "-fopt-info-vec -fopt-info-vec-missed -fopt-info-vec-all"
+no_vector_flags = "-fno-tree-vectorize -fno-tree-slp-vectorize"
+vector_flags = "-march=native -ftree-vectorize -ftree-slp-vectorize"
+vector_info_flags = "-fopt-info-vec -fopt-info-vec-missed -fopt-info-vec-all -fopt-info-vec-optimized"
 optimization_flags = {
-    "O0": "-O0",
-    "O1": "-O1",
-    "O2": "-O2 ",
+    "O0": f"-O0 {no_vector_flags}",
+    "O1": f"-O1 {no_vector_flags}",
+    "O2": f"-O2 {no_vector_flags}",
     "O3": f"-O3 {vector_flags} {vector_info_flags}",
     "Ofast": f"-Ofast {vector_flags} {vector_info_flags}",
 }
