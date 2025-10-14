@@ -35,6 +35,11 @@ for compiler_tag, compiler_name in defs.compilers.items():
                 f"dgesv{('_' + rs_tag) if rs_tag else ''}",
             )
 
+            asm_file = os.path.join(
+                output_dir,
+                f"dgesv{('_' + rs_tag) if rs_tag else ''}.S",
+            )
+
             log_file = os.path.join(
                 output_dir,
                 f"compile_logs{('_' + rs_tag) if rs_tag else ''}.log",
@@ -47,10 +52,20 @@ for compiler_tag, compiler_name in defs.compilers.items():
             cmd += ["-o", output_file]
             cmd += link_flags
 
+            # asm compilation
+            s_cmd = [compiler_name] + ["-S"] + c_files + [o_flag] + include_flags
+            if rs_flag:
+                s_cmd.append(rs_flag)
+            s_cmd += ["-o", asm_file]
+
             print("Compiling:", f" ".join(cmd))
             module_cmd = defs.modules.get(compiler_tag)
             compile_cmd = " ".join(cmd)
 
-            full_cmd = f"{module_cmd} && {compile_cmd} > {log_file} 2>&1"
-
+            # binary
+            full_cmd = f"{module_cmd} && {' '.join(cmd)} > {log_file} 2>&1"
             subprocess.run(["bash", "-lc", full_cmd], check=True)
+
+            # asm
+            s_cmd_full = f"{module_cmd} && {' '.join(s_cmd)}"
+            subprocess.run(["bash", "-lc", s_cmd_full], check=True)
