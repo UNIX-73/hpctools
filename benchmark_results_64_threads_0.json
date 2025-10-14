@@ -1,0 +1,3878 @@
+{
+    "gcc_8_4_0": {
+        "O1": {
+            "dgesv": {
+                "1024": [
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 1,
+                        "times": {
+                            "Lapacke dgesv": 14133,
+                            "my dgesv solver": 15621
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 3,
+                        "times": {
+                            "Lapacke dgesv": 12179,
+                            "my dgesv solver": 17880
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 2,
+                        "times": {
+                            "Lapacke dgesv": 13218,
+                            "my dgesv solver": 17378
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 4,
+                        "times": {
+                            "Lapacke dgesv": 14009,
+                            "my dgesv solver": 16724
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 5,
+                        "times": {
+                            "Lapacke dgesv": 14016,
+                            "my dgesv solver": 18742
+                        }
+                    }
+                ],
+                "2048": [
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 3,
+                        "times": {
+                            "Lapacke dgesv": 27013,
+                            "my dgesv solver": 82650
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 1,
+                        "times": {
+                            "Lapacke dgesv": 26208,
+                            "my dgesv solver": 86838
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 2,
+                        "times": {
+                            "Lapacke dgesv": 26438,
+                            "my dgesv solver": 108303
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 5,
+                        "times": {
+                            "Lapacke dgesv": 27052,
+                            "my dgesv solver": 176413
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 4,
+                        "times": {
+                            "Lapacke dgesv": 24744,
+                            "my dgesv solver": 223618
+                        }
+                    }
+                ],
+                "4096": [
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 4,
+                        "times": {
+                            "Lapacke dgesv": 49144,
+                            "my dgesv solver": 844775
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 3,
+                        "times": {
+                            "Lapacke dgesv": 51129,
+                            "my dgesv solver": 1085698
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 5,
+                        "times": {
+                            "Lapacke dgesv": 50541,
+                            "my dgesv solver": 1517247
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 2,
+                        "times": {
+                            "Lapacke dgesv": 51502,
+                            "my dgesv solver": 1857428
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 1,
+                        "times": {
+                            "Lapacke dgesv": 50327,
+                            "my dgesv solver": 1860475
+                        }
+                    }
+                ]
+            },
+            "dgesv_rs": {
+                "1024": [
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 1,
+                        "times": {
+                            "Lapacke dgesv": 13073,
+                            "my dgesv solver": 18746
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 4,
+                        "times": {
+                            "Lapacke dgesv": 13940,
+                            "my dgesv solver": 17962
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 3,
+                        "times": {
+                            "Lapacke dgesv": 12119,
+                            "my dgesv solver": 21836
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 5,
+                        "times": {
+                            "Lapacke dgesv": 13671,
+                            "my dgesv solver": 20755
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 2,
+                        "times": {
+                            "Lapacke dgesv": 12151,
+                            "my dgesv solver": 23520
+                        }
+                    }
+                ],
+                "2048": [
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 1,
+                        "times": {
+                            "Lapacke dgesv": 26643,
+                            "my dgesv solver": 89912
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 5,
+                        "times": {
+                            "Lapacke dgesv": 27180,
+                            "my dgesv solver": 94077
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 2,
+                        "times": {
+                            "Lapacke dgesv": 26599,
+                            "my dgesv solver": 108925
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 3,
+                        "times": {
+                            "Lapacke dgesv": 27292,
+                            "my dgesv solver": 112038
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 4,
+                        "times": {
+                            "Lapacke dgesv": 27090,
+                            "my dgesv solver": 114048
+                        }
+                    }
+                ],
+                "4096": [
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 5,
+                        "times": {
+                            "Lapacke dgesv": 47905,
+                            "my dgesv solver": 823199
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 4,
+                        "times": {
+                            "Lapacke dgesv": 47035,
+                            "my dgesv solver": 834000
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 2,
+                        "times": {
+                            "Lapacke dgesv": 46359,
+                            "my dgesv solver": 878444
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 3,
+                        "times": {
+                            "Lapacke dgesv": 47789,
+                            "my dgesv solver": 886693
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 1,
+                        "times": {
+                            "Lapacke dgesv": 46120,
+                            "my dgesv solver": 1456638
+                        }
+                    }
+                ]
+            }
+        },
+        "O2": {
+            "dgesv": {
+                "1024": [
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 3,
+                        "times": {
+                            "Lapacke dgesv": 13786,
+                            "my dgesv solver": 16835
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 1,
+                        "times": {
+                            "Lapacke dgesv": 13257,
+                            "my dgesv solver": 20187
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 4,
+                        "times": {
+                            "Lapacke dgesv": 13904,
+                            "my dgesv solver": 19138
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 2,
+                        "times": {
+                            "Lapacke dgesv": 13335,
+                            "my dgesv solver": 20779
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 5,
+                        "times": {
+                            "Lapacke dgesv": 7651,
+                            "my dgesv solver": 15577
+                        }
+                    }
+                ],
+                "2048": [
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 2,
+                        "times": {
+                            "Lapacke dgesv": 17815,
+                            "my dgesv solver": 72174
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 3,
+                        "times": {
+                            "Lapacke dgesv": 19351,
+                            "my dgesv solver": 153344
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 5,
+                        "times": {
+                            "Lapacke dgesv": 18832,
+                            "my dgesv solver": 171626
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 1,
+                        "times": {
+                            "Lapacke dgesv": 20075,
+                            "my dgesv solver": 208118
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 4,
+                        "times": {
+                            "Lapacke dgesv": 19403,
+                            "my dgesv solver": 215360
+                        }
+                    }
+                ],
+                "4096": [
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 5,
+                        "times": {
+                            "Lapacke dgesv": 23315,
+                            "my dgesv solver": 785024
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 2,
+                        "times": {
+                            "Lapacke dgesv": 26400,
+                            "my dgesv solver": 822290
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 4,
+                        "times": {
+                            "Lapacke dgesv": 24801,
+                            "my dgesv solver": 915871
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 1,
+                        "times": {
+                            "Lapacke dgesv": 26173,
+                            "my dgesv solver": 931888
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 3,
+                        "times": {
+                            "Lapacke dgesv": 24787,
+                            "my dgesv solver": 1149110
+                        }
+                    }
+                ]
+            },
+            "dgesv_rs": {
+                "1024": [
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 1,
+                        "times": {
+                            "Lapacke dgesv": 8293,
+                            "my dgesv solver": 10342
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 3,
+                        "times": {
+                            "Lapacke dgesv": 8863,
+                            "my dgesv solver": 12182
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 2,
+                        "times": {
+                            "Lapacke dgesv": 9480,
+                            "my dgesv solver": 13103
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 5,
+                        "times": {
+                            "Lapacke dgesv": 2996,
+                            "my dgesv solver": 7198
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 4,
+                        "times": {
+                            "Lapacke dgesv": 3158,
+                            "my dgesv solver": 10202
+                        }
+                    }
+                ],
+                "2048": [
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 3,
+                        "times": {
+                            "Lapacke dgesv": 5637,
+                            "my dgesv solver": 50175
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 5,
+                        "times": {
+                            "Lapacke dgesv": 6340,
+                            "my dgesv solver": 81268
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 2,
+                        "times": {
+                            "Lapacke dgesv": 6853,
+                            "my dgesv solver": 160546
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 4,
+                        "times": {
+                            "Lapacke dgesv": 7677,
+                            "my dgesv solver": 164023
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 1,
+                        "times": {
+                            "Lapacke dgesv": 5996,
+                            "my dgesv solver": 210473
+                        }
+                    }
+                ],
+                "4096": [
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 1,
+                        "times": {
+                            "Lapacke dgesv": 16613,
+                            "my dgesv solver": 806275
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 5,
+                        "times": {
+                            "Lapacke dgesv": 17896,
+                            "my dgesv solver": 830945
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 4,
+                        "times": {
+                            "Lapacke dgesv": 18970,
+                            "my dgesv solver": 910878
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 3,
+                        "times": {
+                            "Lapacke dgesv": 19278,
+                            "my dgesv solver": 1847774
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 2,
+                        "times": {
+                            "Lapacke dgesv": 17848,
+                            "my dgesv solver": 1887496
+                        }
+                    }
+                ]
+            }
+        },
+        "O0": {
+            "dgesv_rs": {
+                "1024": [
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 3,
+                        "times": {
+                            "Lapacke dgesv": 12228,
+                            "my dgesv solver": 48346
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 5,
+                        "times": {
+                            "Lapacke dgesv": 12432,
+                            "my dgesv solver": 49097
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 4,
+                        "times": {
+                            "Lapacke dgesv": 12217,
+                            "my dgesv solver": 50369
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 1,
+                        "times": {
+                            "Lapacke dgesv": 12524,
+                            "my dgesv solver": 50319
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 2,
+                        "times": {
+                            "Lapacke dgesv": 13576,
+                            "my dgesv solver": 52733
+                        }
+                    }
+                ],
+                "2048": [
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 4,
+                        "times": {
+                            "Lapacke dgesv": 28005,
+                            "my dgesv solver": 161037
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 1,
+                        "times": {
+                            "Lapacke dgesv": 25754,
+                            "my dgesv solver": 188971
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 3,
+                        "times": {
+                            "Lapacke dgesv": 26914,
+                            "my dgesv solver": 213391
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 5,
+                        "times": {
+                            "Lapacke dgesv": 26161,
+                            "my dgesv solver": 218358
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 2,
+                        "times": {
+                            "Lapacke dgesv": 26481,
+                            "my dgesv solver": 225027
+                        }
+                    }
+                ],
+                "4096": [
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 3,
+                        "times": {
+                            "Lapacke dgesv": 49365,
+                            "my dgesv solver": 1761833
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 5,
+                        "times": {
+                            "Lapacke dgesv": 49075,
+                            "my dgesv solver": 2050299
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 2,
+                        "times": {
+                            "Lapacke dgesv": 49905,
+                            "my dgesv solver": 2054414
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 4,
+                        "times": {
+                            "Lapacke dgesv": 48027,
+                            "my dgesv solver": 2081349
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 1,
+                        "times": {
+                            "Lapacke dgesv": 50856,
+                            "my dgesv solver": 2134481
+                        }
+                    }
+                ]
+            },
+            "dgesv": {
+                "1024": [
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 5,
+                        "times": {
+                            "Lapacke dgesv": 14097,
+                            "my dgesv solver": 50162
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 3,
+                        "times": {
+                            "Lapacke dgesv": 11574,
+                            "my dgesv solver": 53226
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 4,
+                        "times": {
+                            "Lapacke dgesv": 14416,
+                            "my dgesv solver": 50847
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 1,
+                        "times": {
+                            "Lapacke dgesv": 13726,
+                            "my dgesv solver": 52338
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 2,
+                        "times": {
+                            "Lapacke dgesv": 12133,
+                            "my dgesv solver": 58075
+                        }
+                    }
+                ],
+                "2048": [
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 4,
+                        "times": {
+                            "Lapacke dgesv": 26716,
+                            "my dgesv solver": 287475
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 5,
+                        "times": {
+                            "Lapacke dgesv": 26942,
+                            "my dgesv solver": 308590
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 2,
+                        "times": {
+                            "Lapacke dgesv": 26819,
+                            "my dgesv solver": 342891
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 1,
+                        "times": {
+                            "Lapacke dgesv": 24667,
+                            "my dgesv solver": 422961
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 3,
+                        "times": {
+                            "Lapacke dgesv": 24925,
+                            "my dgesv solver": 428047
+                        }
+                    }
+                ],
+                "4096": [
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 3,
+                        "times": {
+                            "Lapacke dgesv": 49010,
+                            "my dgesv solver": 3879148
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 2,
+                        "times": {
+                            "Lapacke dgesv": 48777,
+                            "my dgesv solver": 3880395
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 1,
+                        "times": {
+                            "Lapacke dgesv": 50875,
+                            "my dgesv solver": 4080856
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 4,
+                        "times": {
+                            "Lapacke dgesv": 49266,
+                            "my dgesv solver": 4116354
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 5,
+                        "times": {
+                            "Lapacke dgesv": 50556,
+                            "my dgesv solver": 4117906
+                        }
+                    }
+                ]
+            }
+        },
+        "O3": {
+            "dgesv": {
+                "1024": [
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 3,
+                        "times": {
+                            "Lapacke dgesv": 2984,
+                            "my dgesv solver": 4523
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 1,
+                        "times": {
+                            "Lapacke dgesv": 3461,
+                            "my dgesv solver": 12585
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 2,
+                        "times": {
+                            "Lapacke dgesv": 3743,
+                            "my dgesv solver": 12674
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 4,
+                        "times": {
+                            "Lapacke dgesv": 3216,
+                            "my dgesv solver": 10513
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 5,
+                        "times": {
+                            "Lapacke dgesv": 3163,
+                            "my dgesv solver": 14384
+                        }
+                    }
+                ],
+                "2048": [
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 1,
+                        "times": {
+                            "Lapacke dgesv": 4599,
+                            "my dgesv solver": 50871
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 4,
+                        "times": {
+                            "Lapacke dgesv": 4794,
+                            "my dgesv solver": 44250
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 3,
+                        "times": {
+                            "Lapacke dgesv": 4660,
+                            "my dgesv solver": 69502
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 2,
+                        "times": {
+                            "Lapacke dgesv": 5618,
+                            "my dgesv solver": 123132
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 5,
+                        "times": {
+                            "Lapacke dgesv": 5062,
+                            "my dgesv solver": 136069
+                        }
+                    }
+                ],
+                "4096": [
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 5,
+                        "times": {
+                            "Lapacke dgesv": 12235,
+                            "my dgesv solver": 693838
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 3,
+                        "times": {
+                            "Lapacke dgesv": 14484,
+                            "my dgesv solver": 878149
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 2,
+                        "times": {
+                            "Lapacke dgesv": 13327,
+                            "my dgesv solver": 889666
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 1,
+                        "times": {
+                            "Lapacke dgesv": 15497,
+                            "my dgesv solver": 1380788
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 4,
+                        "times": {
+                            "Lapacke dgesv": 14262,
+                            "my dgesv solver": 1422361
+                        }
+                    }
+                ]
+            },
+            "dgesv_rs": {
+                "1024": [
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 1,
+                        "times": {
+                            "Lapacke dgesv": 2006,
+                            "my dgesv solver": 4533
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 2,
+                        "times": {
+                            "Lapacke dgesv": 2105,
+                            "my dgesv solver": 3988
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 4,
+                        "times": {
+                            "Lapacke dgesv": 1969,
+                            "my dgesv solver": 2677
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 3,
+                        "times": {
+                            "Lapacke dgesv": 2111,
+                            "my dgesv solver": 15636
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 5,
+                        "times": {
+                            "Lapacke dgesv": 2735,
+                            "my dgesv solver": 14760
+                        }
+                    }
+                ],
+                "2048": [
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 3,
+                        "times": {
+                            "Lapacke dgesv": 5641,
+                            "my dgesv solver": 79325
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 1,
+                        "times": {
+                            "Lapacke dgesv": 6515,
+                            "my dgesv solver": 122945
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 2,
+                        "times": {
+                            "Lapacke dgesv": 7390,
+                            "my dgesv solver": 122293
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 4,
+                        "times": {
+                            "Lapacke dgesv": 6225,
+                            "my dgesv solver": 140938
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 5,
+                        "times": {
+                            "Lapacke dgesv": 5307,
+                            "my dgesv solver": 225731
+                        }
+                    }
+                ],
+                "4096": [
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 5,
+                        "times": {
+                            "Lapacke dgesv": 9829,
+                            "my dgesv solver": 733192
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 4,
+                        "times": {
+                            "Lapacke dgesv": 8986,
+                            "my dgesv solver": 779270
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 2,
+                        "times": {
+                            "Lapacke dgesv": 12668,
+                            "my dgesv solver": 848756
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 3,
+                        "times": {
+                            "Lapacke dgesv": 14911,
+                            "my dgesv solver": 1226736
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 1,
+                        "times": {
+                            "Lapacke dgesv": 16756,
+                            "my dgesv solver": 1702304
+                        }
+                    }
+                ]
+            }
+        },
+        "Ofast": {
+            "dgesv": {
+                "1024": [
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 1,
+                        "times": {
+                            "Lapacke dgesv": 1897,
+                            "my dgesv solver": 5528
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 3,
+                        "times": {
+                            "Lapacke dgesv": 2173,
+                            "my dgesv solver": 3270
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 4,
+                        "times": {
+                            "Lapacke dgesv": 2066,
+                            "my dgesv solver": 3072
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 2,
+                        "times": {
+                            "Lapacke dgesv": 2220,
+                            "my dgesv solver": 9459
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 5,
+                        "times": {
+                            "Lapacke dgesv": 2095,
+                            "my dgesv solver": 11946
+                        }
+                    }
+                ],
+                "2048": [
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 1,
+                        "times": {
+                            "Lapacke dgesv": 4684,
+                            "my dgesv solver": 71217
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 2,
+                        "times": {
+                            "Lapacke dgesv": 5060,
+                            "my dgesv solver": 84773
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 4,
+                        "times": {
+                            "Lapacke dgesv": 4764,
+                            "my dgesv solver": 94316
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 5,
+                        "times": {
+                            "Lapacke dgesv": 4600,
+                            "my dgesv solver": 127539
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 3,
+                        "times": {
+                            "Lapacke dgesv": 5702,
+                            "my dgesv solver": 141384
+                        }
+                    }
+                ],
+                "4096": [
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 1,
+                        "times": {
+                            "Lapacke dgesv": 10239,
+                            "my dgesv solver": 632046
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 3,
+                        "times": {
+                            "Lapacke dgesv": 12595,
+                            "my dgesv solver": 681864
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 4,
+                        "times": {
+                            "Lapacke dgesv": 12308,
+                            "my dgesv solver": 750065
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 5,
+                        "times": {
+                            "Lapacke dgesv": 14505,
+                            "my dgesv solver": 1550509
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 2,
+                        "times": {
+                            "Lapacke dgesv": 15825,
+                            "my dgesv solver": 1678857
+                        }
+                    }
+                ]
+            },
+            "dgesv_rs": {
+                "1024": [
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 3,
+                        "times": {
+                            "Lapacke dgesv": 2121,
+                            "my dgesv solver": 4230
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 2,
+                        "times": {
+                            "Lapacke dgesv": 2884,
+                            "my dgesv solver": 12423
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 1,
+                        "times": {
+                            "Lapacke dgesv": 2966,
+                            "my dgesv solver": 13629
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 4,
+                        "times": {
+                            "Lapacke dgesv": 2242,
+                            "my dgesv solver": 5014
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 5,
+                        "times": {
+                            "Lapacke dgesv": 2479,
+                            "my dgesv solver": 10144
+                        }
+                    }
+                ],
+                "2048": [
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 2,
+                        "times": {
+                            "Lapacke dgesv": 4667,
+                            "my dgesv solver": 64718
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 5,
+                        "times": {
+                            "Lapacke dgesv": 5615,
+                            "my dgesv solver": 66159
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 1,
+                        "times": {
+                            "Lapacke dgesv": 4773,
+                            "my dgesv solver": 72607
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 4,
+                        "times": {
+                            "Lapacke dgesv": 5596,
+                            "my dgesv solver": 68304
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 3,
+                        "times": {
+                            "Lapacke dgesv": 5478,
+                            "my dgesv solver": 74204
+                        }
+                    }
+                ],
+                "4096": [
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 5,
+                        "times": {
+                            "Lapacke dgesv": 11405,
+                            "my dgesv solver": 605899
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 2,
+                        "times": {
+                            "Lapacke dgesv": 11215,
+                            "my dgesv solver": 707633
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 4,
+                        "times": {
+                            "Lapacke dgesv": 12314,
+                            "my dgesv solver": 723020
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 1,
+                        "times": {
+                            "Lapacke dgesv": 11818,
+                            "my dgesv solver": 1167384
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 3,
+                        "times": {
+                            "Lapacke dgesv": 16424,
+                            "my dgesv solver": 1703056
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "gcc_10_1_0": {
+        "O0": {
+            "dgesv": {
+                "1024": [
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 1,
+                        "times": {
+                            "Lapacke dgesv": 2394,
+                            "my dgesv solver": 15398
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 2,
+                        "times": {
+                            "Lapacke dgesv": 1973,
+                            "my dgesv solver": 11674
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 3,
+                        "times": {
+                            "Lapacke dgesv": 2089,
+                            "my dgesv solver": 10448
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 4,
+                        "times": {
+                            "Lapacke dgesv": 2094,
+                            "my dgesv solver": 12364
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 5,
+                        "times": {
+                            "Lapacke dgesv": 2685,
+                            "my dgesv solver": 27179
+                        }
+                    }
+                ],
+                "2048": [
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 1,
+                        "times": {
+                            "Lapacke dgesv": 4956,
+                            "my dgesv solver": 135227
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 4,
+                        "times": {
+                            "Lapacke dgesv": 5481,
+                            "my dgesv solver": 135967
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 2,
+                        "times": {
+                            "Lapacke dgesv": 5432,
+                            "my dgesv solver": 137564
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 3,
+                        "times": {
+                            "Lapacke dgesv": 5321,
+                            "my dgesv solver": 164489
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 5,
+                        "times": {
+                            "Lapacke dgesv": 6423,
+                            "my dgesv solver": 242619
+                        }
+                    }
+                ],
+                "4096": [
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 1,
+                        "times": {
+                            "Lapacke dgesv": 11449,
+                            "my dgesv solver": 1922418
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 3,
+                        "times": {
+                            "Lapacke dgesv": 11573,
+                            "my dgesv solver": 2120589
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 4,
+                        "times": {
+                            "Lapacke dgesv": 11373,
+                            "my dgesv solver": 2268345
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 5,
+                        "times": {
+                            "Lapacke dgesv": 15259,
+                            "my dgesv solver": 3708026
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 2,
+                        "times": {
+                            "Lapacke dgesv": 15917,
+                            "my dgesv solver": 3808988
+                        }
+                    }
+                ]
+            },
+            "dgesv_rs": {
+                "1024": [
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 2,
+                        "times": {
+                            "Lapacke dgesv": 1891,
+                            "my dgesv solver": 10843
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 1,
+                        "times": {
+                            "Lapacke dgesv": 2285,
+                            "my dgesv solver": 28122
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 3,
+                        "times": {
+                            "Lapacke dgesv": 1980,
+                            "my dgesv solver": 10481
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 4,
+                        "times": {
+                            "Lapacke dgesv": 2139,
+                            "my dgesv solver": 10223
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 5,
+                        "times": {
+                            "Lapacke dgesv": 1956,
+                            "my dgesv solver": 10649
+                        }
+                    }
+                ],
+                "2048": [
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 4,
+                        "times": {
+                            "Lapacke dgesv": 4193,
+                            "my dgesv solver": 111632
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 1,
+                        "times": {
+                            "Lapacke dgesv": 4719,
+                            "my dgesv solver": 150221
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 3,
+                        "times": {
+                            "Lapacke dgesv": 4581,
+                            "my dgesv solver": 149442
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 2,
+                        "times": {
+                            "Lapacke dgesv": 5501,
+                            "my dgesv solver": 274567
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 5,
+                        "times": {
+                            "Lapacke dgesv": 5316,
+                            "my dgesv solver": 266070
+                        }
+                    }
+                ],
+                "4096": [
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 4,
+                        "times": {
+                            "Lapacke dgesv": 12074,
+                            "my dgesv solver": 2024679
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 1,
+                        "times": {
+                            "Lapacke dgesv": 10002,
+                            "my dgesv solver": 2131412
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 5,
+                        "times": {
+                            "Lapacke dgesv": 11950,
+                            "my dgesv solver": 2112087
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 2,
+                        "times": {
+                            "Lapacke dgesv": 13842,
+                            "my dgesv solver": 3653125
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 3,
+                        "times": {
+                            "Lapacke dgesv": 13138,
+                            "my dgesv solver": 3647009
+                        }
+                    }
+                ]
+            }
+        },
+        "O1": {
+            "dgesv": {
+                "1024": [
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 1,
+                        "times": {
+                            "Lapacke dgesv": 2105,
+                            "my dgesv solver": 3624
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 2,
+                        "times": {
+                            "Lapacke dgesv": 2032,
+                            "my dgesv solver": 3746
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 3,
+                        "times": {
+                            "Lapacke dgesv": 1991,
+                            "my dgesv solver": 7061
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 4,
+                        "times": {
+                            "Lapacke dgesv": 1925,
+                            "my dgesv solver": 7481
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 5,
+                        "times": {
+                            "Lapacke dgesv": 2125,
+                            "my dgesv solver": 7572
+                        }
+                    }
+                ],
+                "2048": [
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 1,
+                        "times": {
+                            "Lapacke dgesv": 4709,
+                            "my dgesv solver": 93044
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 2,
+                        "times": {
+                            "Lapacke dgesv": 5005,
+                            "my dgesv solver": 99819
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 4,
+                        "times": {
+                            "Lapacke dgesv": 3957,
+                            "my dgesv solver": 43332
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 3,
+                        "times": {
+                            "Lapacke dgesv": 4610,
+                            "my dgesv solver": 76109
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 5,
+                        "times": {
+                            "Lapacke dgesv": 4099,
+                            "my dgesv solver": 92220
+                        }
+                    }
+                ],
+                "4096": [
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 3,
+                        "times": {
+                            "Lapacke dgesv": 9480,
+                            "my dgesv solver": 689002
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 2,
+                        "times": {
+                            "Lapacke dgesv": 9742,
+                            "my dgesv solver": 716265
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 1,
+                        "times": {
+                            "Lapacke dgesv": 9533,
+                            "my dgesv solver": 736469
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 5,
+                        "times": {
+                            "Lapacke dgesv": 9763,
+                            "my dgesv solver": 1160731
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 4,
+                        "times": {
+                            "Lapacke dgesv": 10071,
+                            "my dgesv solver": 1846257
+                        }
+                    }
+                ]
+            },
+            "dgesv_rs": {
+                "1024": [
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 1,
+                        "times": {
+                            "Lapacke dgesv": 1946,
+                            "my dgesv solver": 3509
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 2,
+                        "times": {
+                            "Lapacke dgesv": 1935,
+                            "my dgesv solver": 3502
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 3,
+                        "times": {
+                            "Lapacke dgesv": 1974,
+                            "my dgesv solver": 2533
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 4,
+                        "times": {
+                            "Lapacke dgesv": 2318,
+                            "my dgesv solver": 2521
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 5,
+                        "times": {
+                            "Lapacke dgesv": 2001,
+                            "my dgesv solver": 2466
+                        }
+                    }
+                ],
+                "2048": [
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 2,
+                        "times": {
+                            "Lapacke dgesv": 4579,
+                            "my dgesv solver": 45372
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 4,
+                        "times": {
+                            "Lapacke dgesv": 4120,
+                            "my dgesv solver": 39000
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 1,
+                        "times": {
+                            "Lapacke dgesv": 4670,
+                            "my dgesv solver": 55615
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 3,
+                        "times": {
+                            "Lapacke dgesv": 4542,
+                            "my dgesv solver": 79856
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 5,
+                        "times": {
+                            "Lapacke dgesv": 4882,
+                            "my dgesv solver": 115886
+                        }
+                    }
+                ],
+                "4096": [
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 3,
+                        "times": {
+                            "Lapacke dgesv": 9183,
+                            "my dgesv solver": 528683
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 1,
+                        "times": {
+                            "Lapacke dgesv": 9850,
+                            "my dgesv solver": 702262
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 2,
+                        "times": {
+                            "Lapacke dgesv": 9837,
+                            "my dgesv solver": 695575
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 4,
+                        "times": {
+                            "Lapacke dgesv": 11204,
+                            "my dgesv solver": 794691
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 5,
+                        "times": {
+                            "Lapacke dgesv": 11963,
+                            "my dgesv solver": 1147263
+                        }
+                    }
+                ]
+            }
+        },
+        "O2": {
+            "dgesv": {
+                "1024": [
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 1,
+                        "times": {
+                            "Lapacke dgesv": 2790,
+                            "my dgesv solver": 4290
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 2,
+                        "times": {
+                            "Lapacke dgesv": 2597,
+                            "my dgesv solver": 3542
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 3,
+                        "times": {
+                            "Lapacke dgesv": 2689,
+                            "my dgesv solver": 5023
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 5,
+                        "times": {
+                            "Lapacke dgesv": 2491,
+                            "my dgesv solver": 3875
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 4,
+                        "times": {
+                            "Lapacke dgesv": 2350,
+                            "my dgesv solver": 4623
+                        }
+                    }
+                ],
+                "2048": [
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 3,
+                        "times": {
+                            "Lapacke dgesv": 5204,
+                            "my dgesv solver": 41136
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 5,
+                        "times": {
+                            "Lapacke dgesv": 5182,
+                            "my dgesv solver": 68621
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 1,
+                        "times": {
+                            "Lapacke dgesv": 5233,
+                            "my dgesv solver": 122358
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 4,
+                        "times": {
+                            "Lapacke dgesv": 5860,
+                            "my dgesv solver": 160914
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 2,
+                        "times": {
+                            "Lapacke dgesv": 5390,
+                            "my dgesv solver": 171908
+                        }
+                    }
+                ],
+                "4096": [
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 5,
+                        "times": {
+                            "Lapacke dgesv": 11221,
+                            "my dgesv solver": 526497
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 4,
+                        "times": {
+                            "Lapacke dgesv": 11716,
+                            "my dgesv solver": 690049
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 2,
+                        "times": {
+                            "Lapacke dgesv": 9832,
+                            "my dgesv solver": 815472
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 3,
+                        "times": {
+                            "Lapacke dgesv": 14004,
+                            "my dgesv solver": 1349564
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 1,
+                        "times": {
+                            "Lapacke dgesv": 11366,
+                            "my dgesv solver": 1589438
+                        }
+                    }
+                ]
+            },
+            "dgesv_rs": {
+                "1024": [
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 1,
+                        "times": {
+                            "Lapacke dgesv": 2601,
+                            "my dgesv solver": 6892
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 3,
+                        "times": {
+                            "Lapacke dgesv": 1875,
+                            "my dgesv solver": 3085
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 2,
+                        "times": {
+                            "Lapacke dgesv": 2138,
+                            "my dgesv solver": 6686
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 4,
+                        "times": {
+                            "Lapacke dgesv": 2245,
+                            "my dgesv solver": 6118
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 5,
+                        "times": {
+                            "Lapacke dgesv": 2264,
+                            "my dgesv solver": 5679
+                        }
+                    }
+                ],
+                "2048": [
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 3,
+                        "times": {
+                            "Lapacke dgesv": 5343,
+                            "my dgesv solver": 46851
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 2,
+                        "times": {
+                            "Lapacke dgesv": 5279,
+                            "my dgesv solver": 62605
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 1,
+                        "times": {
+                            "Lapacke dgesv": 4082,
+                            "my dgesv solver": 68351
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 5,
+                        "times": {
+                            "Lapacke dgesv": 5359,
+                            "my dgesv solver": 97566
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 4,
+                        "times": {
+                            "Lapacke dgesv": 5360,
+                            "my dgesv solver": 107170
+                        }
+                    }
+                ],
+                "4096": [
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 1,
+                        "times": {
+                            "Lapacke dgesv": 11998,
+                            "my dgesv solver": 663384
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 4,
+                        "times": {
+                            "Lapacke dgesv": 12012,
+                            "my dgesv solver": 670613
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 2,
+                        "times": {
+                            "Lapacke dgesv": 13339,
+                            "my dgesv solver": 1203179
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 5,
+                        "times": {
+                            "Lapacke dgesv": 11463,
+                            "my dgesv solver": 1582900
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 3,
+                        "times": {
+                            "Lapacke dgesv": 12797,
+                            "my dgesv solver": 1689151
+                        }
+                    }
+                ]
+            }
+        },
+        "O3": {
+            "dgesv": {
+                "1024": [
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 1,
+                        "times": {
+                            "Lapacke dgesv": 1874,
+                            "my dgesv solver": 2647
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 2,
+                        "times": {
+                            "Lapacke dgesv": 2238,
+                            "my dgesv solver": 2490
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 4,
+                        "times": {
+                            "Lapacke dgesv": 2112,
+                            "my dgesv solver": 2276
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 3,
+                        "times": {
+                            "Lapacke dgesv": 2410,
+                            "my dgesv solver": 9348
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 5,
+                        "times": {
+                            "Lapacke dgesv": 2076,
+                            "my dgesv solver": 5747
+                        }
+                    }
+                ],
+                "2048": [
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 3,
+                        "times": {
+                            "Lapacke dgesv": 5023,
+                            "my dgesv solver": 52952
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 1,
+                        "times": {
+                            "Lapacke dgesv": 4979,
+                            "my dgesv solver": 56252
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 4,
+                        "times": {
+                            "Lapacke dgesv": 4554,
+                            "my dgesv solver": 59541
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 5,
+                        "times": {
+                            "Lapacke dgesv": 4291,
+                            "my dgesv solver": 67606
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 2,
+                        "times": {
+                            "Lapacke dgesv": 5312,
+                            "my dgesv solver": 151339
+                        }
+                    }
+                ],
+                "4096": [
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 1,
+                        "times": {
+                            "Lapacke dgesv": 10297,
+                            "my dgesv solver": 768021
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 5,
+                        "times": {
+                            "Lapacke dgesv": 13639,
+                            "my dgesv solver": 796869
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 4,
+                        "times": {
+                            "Lapacke dgesv": 13042,
+                            "my dgesv solver": 1317892
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 2,
+                        "times": {
+                            "Lapacke dgesv": 12546,
+                            "my dgesv solver": 1510861
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 3,
+                        "times": {
+                            "Lapacke dgesv": 12112,
+                            "my dgesv solver": 1689512
+                        }
+                    }
+                ]
+            },
+            "dgesv_rs": {
+                "1024": [
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 1,
+                        "times": {
+                            "Lapacke dgesv": 3090,
+                            "my dgesv solver": 4095
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 3,
+                        "times": {
+                            "Lapacke dgesv": 2362,
+                            "my dgesv solver": 6551
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 2,
+                        "times": {
+                            "Lapacke dgesv": 2252,
+                            "my dgesv solver": 8500
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 4,
+                        "times": {
+                            "Lapacke dgesv": 1775,
+                            "my dgesv solver": 2532
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 5,
+                        "times": {
+                            "Lapacke dgesv": 2215,
+                            "my dgesv solver": 5193
+                        }
+                    }
+                ],
+                "2048": [
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 2,
+                        "times": {
+                            "Lapacke dgesv": 4895,
+                            "my dgesv solver": 34835
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 1,
+                        "times": {
+                            "Lapacke dgesv": 4540,
+                            "my dgesv solver": 40925
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 3,
+                        "times": {
+                            "Lapacke dgesv": 4290,
+                            "my dgesv solver": 63849
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 4,
+                        "times": {
+                            "Lapacke dgesv": 4803,
+                            "my dgesv solver": 50999
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 5,
+                        "times": {
+                            "Lapacke dgesv": 4700,
+                            "my dgesv solver": 144207
+                        }
+                    }
+                ],
+                "4096": [
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 4,
+                        "times": {
+                            "Lapacke dgesv": 10855,
+                            "my dgesv solver": 732429
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 5,
+                        "times": {
+                            "Lapacke dgesv": 9993,
+                            "my dgesv solver": 726454
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 1,
+                        "times": {
+                            "Lapacke dgesv": 10957,
+                            "my dgesv solver": 1352983
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 3,
+                        "times": {
+                            "Lapacke dgesv": 12718,
+                            "my dgesv solver": 1532168
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 2,
+                        "times": {
+                            "Lapacke dgesv": 12125,
+                            "my dgesv solver": 1617339
+                        }
+                    }
+                ]
+            }
+        },
+        "Ofast": {
+            "dgesv": {
+                "1024": [
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 1,
+                        "times": {
+                            "Lapacke dgesv": 2096,
+                            "my dgesv solver": 2331
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 2,
+                        "times": {
+                            "Lapacke dgesv": 2183,
+                            "my dgesv solver": 2416
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 3,
+                        "times": {
+                            "Lapacke dgesv": 2014,
+                            "my dgesv solver": 2435
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 4,
+                        "times": {
+                            "Lapacke dgesv": 2031,
+                            "my dgesv solver": 2600
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 5,
+                        "times": {
+                            "Lapacke dgesv": 2075,
+                            "my dgesv solver": 2471
+                        }
+                    }
+                ],
+                "2048": [
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 1,
+                        "times": {
+                            "Lapacke dgesv": 4170,
+                            "my dgesv solver": 47891
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 2,
+                        "times": {
+                            "Lapacke dgesv": 4398,
+                            "my dgesv solver": 32809
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 4,
+                        "times": {
+                            "Lapacke dgesv": 4331,
+                            "my dgesv solver": 34591
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 3,
+                        "times": {
+                            "Lapacke dgesv": 4628,
+                            "my dgesv solver": 94951
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 5,
+                        "times": {
+                            "Lapacke dgesv": 5237,
+                            "my dgesv solver": 89973
+                        }
+                    }
+                ],
+                "4096": [
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 4,
+                        "times": {
+                            "Lapacke dgesv": 10918,
+                            "my dgesv solver": 762893
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 3,
+                        "times": {
+                            "Lapacke dgesv": 10132,
+                            "my dgesv solver": 779652
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 1,
+                        "times": {
+                            "Lapacke dgesv": 10593,
+                            "my dgesv solver": 809873
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 5,
+                        "times": {
+                            "Lapacke dgesv": 11889,
+                            "my dgesv solver": 875154
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 2,
+                        "times": {
+                            "Lapacke dgesv": 12567,
+                            "my dgesv solver": 1624916
+                        }
+                    }
+                ]
+            },
+            "dgesv_rs": {
+                "1024": [
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 1,
+                        "times": {
+                            "Lapacke dgesv": 2740,
+                            "my dgesv solver": 4676
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 3,
+                        "times": {
+                            "Lapacke dgesv": 1957,
+                            "my dgesv solver": 2222
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 2,
+                        "times": {
+                            "Lapacke dgesv": 2039,
+                            "my dgesv solver": 6277
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 4,
+                        "times": {
+                            "Lapacke dgesv": 1918,
+                            "my dgesv solver": 2324
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 5,
+                        "times": {
+                            "Lapacke dgesv": 2036,
+                            "my dgesv solver": 6186
+                        }
+                    }
+                ],
+                "2048": [
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 1,
+                        "times": {
+                            "Lapacke dgesv": 4663,
+                            "my dgesv solver": 42761
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 3,
+                        "times": {
+                            "Lapacke dgesv": 4212,
+                            "my dgesv solver": 50597
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 2,
+                        "times": {
+                            "Lapacke dgesv": 4610,
+                            "my dgesv solver": 145853
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 5,
+                        "times": {
+                            "Lapacke dgesv": 5176,
+                            "my dgesv solver": 130340
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 4,
+                        "times": {
+                            "Lapacke dgesv": 5102,
+                            "my dgesv solver": 144836
+                        }
+                    }
+                ],
+                "4096": [
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 1,
+                        "times": {
+                            "Lapacke dgesv": 9697,
+                            "my dgesv solver": 777437
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 3,
+                        "times": {
+                            "Lapacke dgesv": 10611,
+                            "my dgesv solver": 815881
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 4,
+                        "times": {
+                            "Lapacke dgesv": 11005,
+                            "my dgesv solver": 1588495
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 5,
+                        "times": {
+                            "Lapacke dgesv": 11576,
+                            "my dgesv solver": 1614850
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 2,
+                        "times": {
+                            "Lapacke dgesv": 11104,
+                            "my dgesv solver": 1796207
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "gcc_11_4_0": {
+        "O0": {
+            "dgesv": {
+                "1024": [
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 1,
+                        "times": {
+                            "Lapacke dgesv": 9688,
+                            "my dgesv solver": 13840
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 3,
+                        "times": {
+                            "Lapacke dgesv": 9747,
+                            "my dgesv solver": 16760
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 2,
+                        "times": {
+                            "Lapacke dgesv": 10217,
+                            "my dgesv solver": 21305
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 5,
+                        "times": {
+                            "Lapacke dgesv": 11272,
+                            "my dgesv solver": 13446
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 4,
+                        "times": {
+                            "Lapacke dgesv": 11882,
+                            "my dgesv solver": 26161
+                        }
+                    }
+                ],
+                "2048": [
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 4,
+                        "times": {
+                            "Lapacke dgesv": 29834,
+                            "my dgesv solver": 141977
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 5,
+                        "times": {
+                            "Lapacke dgesv": 28930,
+                            "my dgesv solver": 169028
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 2,
+                        "times": {
+                            "Lapacke dgesv": 28648,
+                            "my dgesv solver": 269214
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 1,
+                        "times": {
+                            "Lapacke dgesv": 28153,
+                            "my dgesv solver": 273151
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 3,
+                        "times": {
+                            "Lapacke dgesv": 29316,
+                            "my dgesv solver": 269964
+                        }
+                    }
+                ],
+                "4096": [
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 3,
+                        "times": {
+                            "Lapacke dgesv": 36613,
+                            "my dgesv solver": 1796450
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 4,
+                        "times": {
+                            "Lapacke dgesv": 41811,
+                            "my dgesv solver": 1991362
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 2,
+                        "times": {
+                            "Lapacke dgesv": 44995,
+                            "my dgesv solver": 2337730
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 5,
+                        "times": {
+                            "Lapacke dgesv": 43575,
+                            "my dgesv solver": 2440717
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 1,
+                        "times": {
+                            "Lapacke dgesv": 50674,
+                            "my dgesv solver": 2569479
+                        }
+                    }
+                ]
+            },
+            "dgesv_rs": {
+                "1024": [
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 1,
+                        "times": {
+                            "Lapacke dgesv": 8198,
+                            "my dgesv solver": 16471
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 2,
+                        "times": {
+                            "Lapacke dgesv": 10792,
+                            "my dgesv solver": 13298
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 3,
+                        "times": {
+                            "Lapacke dgesv": 9979,
+                            "my dgesv solver": 18077
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 4,
+                        "times": {
+                            "Lapacke dgesv": 8496,
+                            "my dgesv solver": 20613
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 5,
+                        "times": {
+                            "Lapacke dgesv": 9154,
+                            "my dgesv solver": 14931
+                        }
+                    }
+                ],
+                "2048": [
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 5,
+                        "times": {
+                            "Lapacke dgesv": 37894,
+                            "my dgesv solver": 183355
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 1,
+                        "times": {
+                            "Lapacke dgesv": 26186,
+                            "my dgesv solver": 309469
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 3,
+                        "times": {
+                            "Lapacke dgesv": 35875,
+                            "my dgesv solver": 310698
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 2,
+                        "times": {
+                            "Lapacke dgesv": 32615,
+                            "my dgesv solver": 321063
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 4,
+                        "times": {
+                            "Lapacke dgesv": 36641,
+                            "my dgesv solver": 332403
+                        }
+                    }
+                ],
+                "4096": [
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 3,
+                        "times": {
+                            "Lapacke dgesv": 68812,
+                            "my dgesv solver": 1619591
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 5,
+                        "times": {
+                            "Lapacke dgesv": 69435,
+                            "my dgesv solver": 2389134
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 1,
+                        "times": {
+                            "Lapacke dgesv": 71795,
+                            "my dgesv solver": 2472342
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 4,
+                        "times": {
+                            "Lapacke dgesv": 71047,
+                            "my dgesv solver": 2531309
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 2,
+                        "times": {
+                            "Lapacke dgesv": 69729,
+                            "my dgesv solver": 2655689
+                        }
+                    }
+                ]
+            }
+        },
+        "O1": {
+            "dgesv": {
+                "1024": [
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 1,
+                        "times": {
+                            "Lapacke dgesv": 15917,
+                            "my dgesv solver": 7031
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 4,
+                        "times": {
+                            "Lapacke dgesv": 16615,
+                            "my dgesv solver": 4190
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 2,
+                        "times": {
+                            "Lapacke dgesv": 16208,
+                            "my dgesv solver": 9203
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 3,
+                        "times": {
+                            "Lapacke dgesv": 16810,
+                            "my dgesv solver": 6453
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 5,
+                        "times": {
+                            "Lapacke dgesv": 15731,
+                            "my dgesv solver": 7888
+                        }
+                    }
+                ],
+                "2048": [
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 3,
+                        "times": {
+                            "Lapacke dgesv": 33733,
+                            "my dgesv solver": 47679
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 2,
+                        "times": {
+                            "Lapacke dgesv": 34312,
+                            "my dgesv solver": 116975
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 4,
+                        "times": {
+                            "Lapacke dgesv": 34047,
+                            "my dgesv solver": 123157
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 1,
+                        "times": {
+                            "Lapacke dgesv": 34141,
+                            "my dgesv solver": 135959
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 5,
+                        "times": {
+                            "Lapacke dgesv": 33964,
+                            "my dgesv solver": 126221
+                        }
+                    }
+                ],
+                "4096": [
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 3,
+                        "times": {
+                            "Lapacke dgesv": 58860,
+                            "my dgesv solver": 860213
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 5,
+                        "times": {
+                            "Lapacke dgesv": 64886,
+                            "my dgesv solver": 1330565
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 4,
+                        "times": {
+                            "Lapacke dgesv": 67304,
+                            "my dgesv solver": 1366186
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 1,
+                        "times": {
+                            "Lapacke dgesv": 44932,
+                            "my dgesv solver": 1469223
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 2,
+                        "times": {
+                            "Lapacke dgesv": 58691,
+                            "my dgesv solver": 1597071
+                        }
+                    }
+                ]
+            },
+            "dgesv_rs": {
+                "1024": [
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 1,
+                        "times": {
+                            "Lapacke dgesv": 14655,
+                            "my dgesv solver": 4100
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 3,
+                        "times": {
+                            "Lapacke dgesv": 16453,
+                            "my dgesv solver": 3706
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 2,
+                        "times": {
+                            "Lapacke dgesv": 17214,
+                            "my dgesv solver": 6405
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 4,
+                        "times": {
+                            "Lapacke dgesv": 15070,
+                            "my dgesv solver": 3695
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 5,
+                        "times": {
+                            "Lapacke dgesv": 15768,
+                            "my dgesv solver": 4547
+                        }
+                    }
+                ],
+                "2048": [
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 2,
+                        "times": {
+                            "Lapacke dgesv": 29957,
+                            "my dgesv solver": 64189
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 3,
+                        "times": {
+                            "Lapacke dgesv": 31431,
+                            "my dgesv solver": 63131
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 1,
+                        "times": {
+                            "Lapacke dgesv": 28215,
+                            "my dgesv solver": 95690
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 4,
+                        "times": {
+                            "Lapacke dgesv": 32485,
+                            "my dgesv solver": 123691
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 5,
+                        "times": {
+                            "Lapacke dgesv": 33091,
+                            "my dgesv solver": 114525
+                        }
+                    }
+                ],
+                "4096": [
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 2,
+                        "times": {
+                            "Lapacke dgesv": 60606,
+                            "my dgesv solver": 886400
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 4,
+                        "times": {
+                            "Lapacke dgesv": 55236,
+                            "my dgesv solver": 863115
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 1,
+                        "times": {
+                            "Lapacke dgesv": 60359,
+                            "my dgesv solver": 907399
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 3,
+                        "times": {
+                            "Lapacke dgesv": 59421,
+                            "my dgesv solver": 967784
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 5,
+                        "times": {
+                            "Lapacke dgesv": 71581,
+                            "my dgesv solver": 1434748
+                        }
+                    }
+                ]
+            }
+        },
+        "O2": {
+            "dgesv": {
+                "1024": [
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 1,
+                        "times": {
+                            "Lapacke dgesv": 15827,
+                            "my dgesv solver": 9314
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 3,
+                        "times": {
+                            "Lapacke dgesv": 16854,
+                            "my dgesv solver": 5248
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 2,
+                        "times": {
+                            "Lapacke dgesv": 17401,
+                            "my dgesv solver": 5899
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 4,
+                        "times": {
+                            "Lapacke dgesv": 17884,
+                            "my dgesv solver": 5941
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 5,
+                        "times": {
+                            "Lapacke dgesv": 18367,
+                            "my dgesv solver": 8541
+                        }
+                    }
+                ],
+                "2048": [
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 3,
+                        "times": {
+                            "Lapacke dgesv": 45764,
+                            "my dgesv solver": 99955
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 2,
+                        "times": {
+                            "Lapacke dgesv": 44776,
+                            "my dgesv solver": 124232
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 1,
+                        "times": {
+                            "Lapacke dgesv": 44995,
+                            "my dgesv solver": 132463
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 5,
+                        "times": {
+                            "Lapacke dgesv": 46176,
+                            "my dgesv solver": 129494
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 4,
+                        "times": {
+                            "Lapacke dgesv": 45788,
+                            "my dgesv solver": 174640
+                        }
+                    }
+                ],
+                "4096": [
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 2,
+                        "times": {
+                            "Lapacke dgesv": 87615,
+                            "my dgesv solver": 861633
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 1,
+                        "times": {
+                            "Lapacke dgesv": 89964,
+                            "my dgesv solver": 903201
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 5,
+                        "times": {
+                            "Lapacke dgesv": 84889,
+                            "my dgesv solver": 1206671
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 4,
+                        "times": {
+                            "Lapacke dgesv": 88089,
+                            "my dgesv solver": 1242290
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 3,
+                        "times": {
+                            "Lapacke dgesv": 89739,
+                            "my dgesv solver": 1317825
+                        }
+                    }
+                ]
+            },
+            "dgesv_rs": {
+                "1024": [
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 1,
+                        "times": {
+                            "Lapacke dgesv": 19889,
+                            "my dgesv solver": 8508
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 2,
+                        "times": {
+                            "Lapacke dgesv": 20177,
+                            "my dgesv solver": 11012
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 3,
+                        "times": {
+                            "Lapacke dgesv": 18651,
+                            "my dgesv solver": 6244
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 4,
+                        "times": {
+                            "Lapacke dgesv": 20215,
+                            "my dgesv solver": 4726
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 5,
+                        "times": {
+                            "Lapacke dgesv": 20977,
+                            "my dgesv solver": 6040
+                        }
+                    }
+                ],
+                "2048": [
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 1,
+                        "times": {
+                            "Lapacke dgesv": 37518,
+                            "my dgesv solver": 63841
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 4,
+                        "times": {
+                            "Lapacke dgesv": 29469,
+                            "my dgesv solver": 143828
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 2,
+                        "times": {
+                            "Lapacke dgesv": 36987,
+                            "my dgesv solver": 160986
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 5,
+                        "times": {
+                            "Lapacke dgesv": 24159,
+                            "my dgesv solver": 153471
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 3,
+                        "times": {
+                            "Lapacke dgesv": 30633,
+                            "my dgesv solver": 176731
+                        }
+                    }
+                ],
+                "4096": [
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 5,
+                        "times": {
+                            "Lapacke dgesv": 68945,
+                            "my dgesv solver": 688611
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 1,
+                        "times": {
+                            "Lapacke dgesv": 44135,
+                            "my dgesv solver": 814383
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 4,
+                        "times": {
+                            "Lapacke dgesv": 67495,
+                            "my dgesv solver": 848696
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 2,
+                        "times": {
+                            "Lapacke dgesv": 54793,
+                            "my dgesv solver": 905241
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 3,
+                        "times": {
+                            "Lapacke dgesv": 69157,
+                            "my dgesv solver": 1220996
+                        }
+                    }
+                ]
+            }
+        },
+        "O3": {
+            "dgesv": {
+                "1024": [
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 1,
+                        "times": {
+                            "Lapacke dgesv": 17437,
+                            "my dgesv solver": 8599
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 2,
+                        "times": {
+                            "Lapacke dgesv": 16604,
+                            "my dgesv solver": 10611
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 4,
+                        "times": {
+                            "Lapacke dgesv": 16329,
+                            "my dgesv solver": 4891
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 5,
+                        "times": {
+                            "Lapacke dgesv": 16559,
+                            "my dgesv solver": 2871
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 3,
+                        "times": {
+                            "Lapacke dgesv": 16425,
+                            "my dgesv solver": 6910
+                        }
+                    }
+                ],
+                "2048": [
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 2,
+                        "times": {
+                            "Lapacke dgesv": 32956,
+                            "my dgesv solver": 49524
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 3,
+                        "times": {
+                            "Lapacke dgesv": 32339,
+                            "my dgesv solver": 53035
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 4,
+                        "times": {
+                            "Lapacke dgesv": 32241,
+                            "my dgesv solver": 80111
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 1,
+                        "times": {
+                            "Lapacke dgesv": 33889,
+                            "my dgesv solver": 138648
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 5,
+                        "times": {
+                            "Lapacke dgesv": 16930,
+                            "my dgesv solver": 148784
+                        }
+                    }
+                ],
+                "4096": [
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 3,
+                        "times": {
+                            "Lapacke dgesv": 75434,
+                            "my dgesv solver": 618510
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 1,
+                        "times": {
+                            "Lapacke dgesv": 63926,
+                            "my dgesv solver": 661675
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 5,
+                        "times": {
+                            "Lapacke dgesv": 87243,
+                            "my dgesv solver": 1038920
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 4,
+                        "times": {
+                            "Lapacke dgesv": 77440,
+                            "my dgesv solver": 1181670
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 2,
+                        "times": {
+                            "Lapacke dgesv": 67267,
+                            "my dgesv solver": 1231293
+                        }
+                    }
+                ]
+            },
+            "dgesv_rs": {
+                "1024": [
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 1,
+                        "times": {
+                            "Lapacke dgesv": 18427,
+                            "my dgesv solver": 6409
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 2,
+                        "times": {
+                            "Lapacke dgesv": 19424,
+                            "my dgesv solver": 10261
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 3,
+                        "times": {
+                            "Lapacke dgesv": 19510,
+                            "my dgesv solver": 8767
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 4,
+                        "times": {
+                            "Lapacke dgesv": 19879,
+                            "my dgesv solver": 9192
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 5,
+                        "times": {
+                            "Lapacke dgesv": 20991,
+                            "my dgesv solver": 8853
+                        }
+                    }
+                ],
+                "2048": [
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 4,
+                        "times": {
+                            "Lapacke dgesv": 43435,
+                            "my dgesv solver": 49778
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 1,
+                        "times": {
+                            "Lapacke dgesv": 43690,
+                            "my dgesv solver": 68722
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 2,
+                        "times": {
+                            "Lapacke dgesv": 44713,
+                            "my dgesv solver": 136985
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 5,
+                        "times": {
+                            "Lapacke dgesv": 41999,
+                            "my dgesv solver": 136962
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 3,
+                        "times": {
+                            "Lapacke dgesv": 45349,
+                            "my dgesv solver": 151225
+                        }
+                    }
+                ],
+                "4096": [
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 2,
+                        "times": {
+                            "Lapacke dgesv": 77821,
+                            "my dgesv solver": 647517
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 5,
+                        "times": {
+                            "Lapacke dgesv": 72852,
+                            "my dgesv solver": 632123
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 1,
+                        "times": {
+                            "Lapacke dgesv": 77422,
+                            "my dgesv solver": 709005
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 3,
+                        "times": {
+                            "Lapacke dgesv": 77117,
+                            "my dgesv solver": 1090110
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 4,
+                        "times": {
+                            "Lapacke dgesv": 75992,
+                            "my dgesv solver": 1142371
+                        }
+                    }
+                ]
+            }
+        },
+        "Ofast": {
+            "dgesv": {
+                "1024": [
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 1,
+                        "times": {
+                            "Lapacke dgesv": 17690,
+                            "my dgesv solver": 8248
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 2,
+                        "times": {
+                            "Lapacke dgesv": 19331,
+                            "my dgesv solver": 7846
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 4,
+                        "times": {
+                            "Lapacke dgesv": 17020,
+                            "my dgesv solver": 3114
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 3,
+                        "times": {
+                            "Lapacke dgesv": 18467,
+                            "my dgesv solver": 10010
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 5,
+                        "times": {
+                            "Lapacke dgesv": 15581,
+                            "my dgesv solver": 9533
+                        }
+                    }
+                ],
+                "2048": [
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 2,
+                        "times": {
+                            "Lapacke dgesv": 33988,
+                            "my dgesv solver": 51216
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 3,
+                        "times": {
+                            "Lapacke dgesv": 34002,
+                            "my dgesv solver": 101691
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 5,
+                        "times": {
+                            "Lapacke dgesv": 29295,
+                            "my dgesv solver": 112306
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 1,
+                        "times": {
+                            "Lapacke dgesv": 34687,
+                            "my dgesv solver": 130951
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 4,
+                        "times": {
+                            "Lapacke dgesv": 32654,
+                            "my dgesv solver": 133247
+                        }
+                    }
+                ],
+                "4096": [
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 1,
+                        "times": {
+                            "Lapacke dgesv": 48137,
+                            "my dgesv solver": 667742
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 3,
+                        "times": {
+                            "Lapacke dgesv": 66541,
+                            "my dgesv solver": 634066
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 4,
+                        "times": {
+                            "Lapacke dgesv": 66898,
+                            "my dgesv solver": 648085
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 2,
+                        "times": {
+                            "Lapacke dgesv": 65984,
+                            "my dgesv solver": 874140
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 5,
+                        "times": {
+                            "Lapacke dgesv": 67260,
+                            "my dgesv solver": 965909
+                        }
+                    }
+                ]
+            },
+            "dgesv_rs": {
+                "1024": [
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 1,
+                        "times": {
+                            "Lapacke dgesv": 15863,
+                            "my dgesv solver": 5335
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 2,
+                        "times": {
+                            "Lapacke dgesv": 15753,
+                            "my dgesv solver": 6060
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 3,
+                        "times": {
+                            "Lapacke dgesv": 16825,
+                            "my dgesv solver": 5886
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 4,
+                        "times": {
+                            "Lapacke dgesv": 15264,
+                            "my dgesv solver": 9346
+                        }
+                    },
+                    {
+                        "matrix_size": "1024",
+                        "iteration": 5,
+                        "times": {
+                            "Lapacke dgesv": 14459,
+                            "my dgesv solver": 2958
+                        }
+                    }
+                ],
+                "2048": [
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 2,
+                        "times": {
+                            "Lapacke dgesv": 31168,
+                            "my dgesv solver": 44065
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 3,
+                        "times": {
+                            "Lapacke dgesv": 31436,
+                            "my dgesv solver": 54474
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 1,
+                        "times": {
+                            "Lapacke dgesv": 29330,
+                            "my dgesv solver": 102511
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 4,
+                        "times": {
+                            "Lapacke dgesv": 31055,
+                            "my dgesv solver": 97594
+                        }
+                    },
+                    {
+                        "matrix_size": "2048",
+                        "iteration": 5,
+                        "times": {
+                            "Lapacke dgesv": 27801,
+                            "my dgesv solver": 152036
+                        }
+                    }
+                ],
+                "4096": [
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 4,
+                        "times": {
+                            "Lapacke dgesv": 46331,
+                            "my dgesv solver": 459020
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 2,
+                        "times": {
+                            "Lapacke dgesv": 41432,
+                            "my dgesv solver": 817581
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 1,
+                        "times": {
+                            "Lapacke dgesv": 38701,
+                            "my dgesv solver": 914710
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 5,
+                        "times": {
+                            "Lapacke dgesv": 42390,
+                            "my dgesv solver": 812315
+                        }
+                    },
+                    {
+                        "matrix_size": "4096",
+                        "iteration": 3,
+                        "times": {
+                            "Lapacke dgesv": 46868,
+                            "my dgesv solver": 879879
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}

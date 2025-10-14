@@ -3,7 +3,7 @@
 #SBATCH --job-name=hpc_tools_compiler_vectorization
 #SBATCH --output=job_results.out
 #SBATCH --error=job_results.err
-#SBATCH --time=5:00:00
+#SBATCH --time=2:00:00
 #SBATCH --cpus-per-task=64
 #SBATCH --mem=64G
 

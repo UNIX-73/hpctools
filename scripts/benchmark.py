@@ -11,8 +11,6 @@ job_start_t = time.time()
 matrix_sizes = ["1024", "2048", "4096"]
 results = {}
 
-time_regex = re.compile(r"Time taken by ([\w\s]+): (\d+) ms")
-
 
 def run_benchmark(exe_path, compiler_tag, o_tag, exe_name, m_size, iteration):
     iter_start = time.time()
@@ -29,7 +27,7 @@ def run_benchmark(exe_path, compiler_tag, o_tag, exe_name, m_size, iteration):
         text=True,
     )
 
-    times = time_regex.findall(result.stdout)
+    times = defs.time_regex.findall(result.stdout)
     if not times:
         return {
             "matrix_size": m_size,

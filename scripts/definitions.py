@@ -1,4 +1,5 @@
 import os
+import re
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
 root_dir = os.path.realpath(os.path.join(script_dir, ".."))  # normaliza ../
@@ -30,3 +31,5 @@ row_swapping = {
     "": "",
     "rs": "-DROW_SWAPPING",
 }
+
+time_regex = re.compile(r"Time taken by ([\w\s]+): (\d+) ms")
