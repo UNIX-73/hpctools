@@ -1,15 +1,13 @@
 // #include <lapacke.h>
 #include <openblas/lapacke.h>
 // #include <mkl_lapacke.h>
+#include "dgesv.h"
+#include "timer.h"
+#include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <math.h>
 #include <string.h>
 #include <unistd.h>
-#include "timer.h"
-#include "dgesv.h"
-
-#include <matrix_utils.h>
 
 double *generate_matrix(unsigned int size, unsigned int seed)
 {
@@ -93,7 +91,9 @@ int main(int argc, char *argv[])
 	//
 	timestamp(&start);
 
-	info = my_dgesv(n, nrhs, a, b /* add/change the parameters according to your implementation needs */);
+	info = my_dgesv(
+		n, nrhs, (double (*)[n])a,
+		(double (*)[nrhs])b /* add/change the parameters according to your implementation needs */);
 
 	timestamp(&now);
 	printf("Time taken by my dgesv solver: %ld ms\n", diff_milli(&start, &now));
