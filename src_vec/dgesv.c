@@ -23,7 +23,7 @@ int my_dgesv(size_t n, size_t nrhs, double a[restrict n][n], double b[restrict n
 		double max_val = fabs(a[col][col]);
 		for (size_t row = col + 1; row < n; row++)
 		{
-			double val = fabs(a[m_idx(n, row, col)]);
+			double val = fabs(a[row][col]);
 			if (val > max_val)
 			{
 				max_val = val;
