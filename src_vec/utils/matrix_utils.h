@@ -39,7 +39,7 @@ static inline void print_vec(double *vec, size_t n)
 	printf("\n");
 }
 
-static inline void resolve_triangle_matrix(size_t n, size_t nrhs, double *a, double *b)
+static inline void resolve_triangle_matrix(size_t n, size_t nrhs, double a[restrict n][n], double b[restrict n][nrhs])
 {
 	size_t n_minus1 = n - 1;
 
@@ -47,7 +47,7 @@ static inline void resolve_triangle_matrix(size_t n, size_t nrhs, double *a, dou
 	{
 		size_t row = n_minus1 - i;
 
-		double denominator = a[m_idx(n, row, row)];
+		double denominator = a[row][row];
 
 		for (size_t rhs = 0; rhs < nrhs; rhs++)
 		{
@@ -58,19 +58,19 @@ static inline void resolve_triangle_matrix(size_t n, size_t nrhs, double *a, dou
 			{
 				size_t col = n_minus1 - j;
 
-				double constant_mul = a[m_idx(n, row, col)];
-				double constant_resolved = b[m_idx(nrhs, col, rhs)];
-			
+				double constant_mul = a[row][col];
+				double constant_resolved = b[col][rhs];
+
 				// Vectorization improvement attempt
 				double multiplied = constant_mul * constant_resolved;
 				constant = constant + multiplied;
 			}
 
-			b[m_idx(nrhs, row, rhs)] = (b[m_idx(nrhs, row, rhs)] - constant) / denominator;
+			b[row][rhs] = (b[row][rhs] - constant) / denominator;
 		}
 
 #ifdef DEBUG
-		printf("[B] row(%d) val(%.5f)  \n", row, b[row]);
+		printf("[B] row(%zu) val(%.5f)\n", row, b[row][0]);
 #endif
 	}
 }
