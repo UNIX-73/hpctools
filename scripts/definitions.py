@@ -3,7 +3,12 @@ import re
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
 root_dir = os.path.realpath(os.path.join(script_dir, ".."))  # normaliza ../
+
+src_dir = os.path.join(root_dir, "src")
+src_vec_dir = os.path.join(root_dir, "src_vec")
+
 build_dir = os.path.join(root_dir, "build")
+vec_build_dir = os.path.join(root_dir, "vec_build")
 
 compilers = {
     "gcc_8_4_0": "gcc-8.4.0",
@@ -19,7 +24,7 @@ modules = {
 
 no_vector_flags = "-fno-tree-vectorize -fno-tree-slp-vectorize"
 vector_flags = "-march=native -ftree-vectorize -ftree-slp-vectorize"
-vector_info_flags = "-fopt-info-vec -fopt-info-vec-missed -fopt-info-vec-all -fopt-info-vec-optimized"
+vector_info_flags = "-fopt-info-vec -fopt-info-vec-missed"
 optimization_flags = {
     "O0": f"-O0 {no_vector_flags}",
     "O1": f"-O1 {no_vector_flags}",

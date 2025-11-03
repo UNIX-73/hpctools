@@ -5,17 +5,17 @@ import definitions as defs
 for compiler_tag in defs.compilers.keys():
     for flag in defs.optimization_flags.keys():
         os.makedirs(
-            os.path.join(defs.build_dir, compiler_tag, flag, "asm", "dgesv"),
+            os.path.join(defs.vec_build_dir, compiler_tag, flag, "asm", "dgesv"),
             exist_ok=True,
         )
         os.makedirs(
-            os.path.join(defs.build_dir, compiler_tag, flag, "asm", "dgesv_rs"),
+            os.path.join(defs.vec_build_dir, compiler_tag, flag, "asm", "dgesv_rs"),
             exist_ok=True,
         )
 
 c_files = []
 include_dirs = set()
-for dirpath, dirnames, filenames in os.walk(defs.src_dir):
+for dirpath, dirnames, filenames in os.walk(defs.src_vec_dir):
     for filename in filenames:
         full_path = os.path.realpath(os.path.join(dirpath, filename))
         if filename.endswith(".c"):

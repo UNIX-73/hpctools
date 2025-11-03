@@ -60,7 +60,10 @@ static inline void resolve_triangle_matrix(size_t n, size_t nrhs, double *a, dou
 
 				double constant_mul = a[m_idx(n, row, col)];
 				double constant_resolved = b[m_idx(nrhs, col, rhs)];
-				constant += constant_mul * constant_resolved;
+			
+				// Vectorization improvement attempt
+				double multiplied = constant_mul * constant_resolved;
+				constant = constant + multiplied;
 			}
 
 			b[m_idx(nrhs, row, rhs)] = (b[m_idx(nrhs, row, rhs)] - constant) / denominator;

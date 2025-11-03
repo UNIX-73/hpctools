@@ -1,0 +1,392 @@
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/utils/matrix_utils.h:46:5: note: not vectorized: multiple nested loops.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/utils/matrix_utils.h:46:5: note: bad loop form.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/utils/matrix_utils.h:52:9: note: not vectorized: control flow in loop.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/utils/matrix_utils.h:52:9: note: bad loop form.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/utils/matrix_utils.h:56:13: note: step unknown.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/utils/matrix_utils.h:56:13: note: Unknown alignment for access: *_127
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/utils/matrix_utils.h:56:13: note: Unknown misalignment, naturally aligned
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/utils/matrix_utils.h:56:13: note: not ssa-name.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/utils/matrix_utils.h:56:13: note: use not simple.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/utils/matrix_utils.h:56:13: note: not ssa-name.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/utils/matrix_utils.h:56:13: note: use not simple.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/utils/matrix_utils.h:56:13: note: can't use a fully-masked loop because an access isn't contiguous.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/utils/matrix_utils.h:56:13: note: not ssa-name.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/utils/matrix_utils.h:56:13: note: use not simple.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/utils/matrix_utils.h:56:13: note: not ssa-name.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/utils/matrix_utils.h:56:13: note: use not simple.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/utils/matrix_utils.h:56:13: note: reduc op not supported by target.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/utils/matrix_utils.h:56:13: note: cost model: the vector iteration cost = 754 divided by the scalar iteration cost = 48 is greater or equal to the vectorization factor = 8.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/utils/matrix_utils.h:56:13: note: not vectorized: vectorization not profitable.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/utils/matrix_utils.h:56:13: note: not vectorized: vector version will never be profitable.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/utils/matrix_utils.h:56:13: note: step unknown.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/utils/matrix_utils.h:56:13: note: Unknown alignment for access: *_127
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/utils/matrix_utils.h:56:13: note: Unknown misalignment, naturally aligned
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/utils/matrix_utils.h:56:13: note: not ssa-name.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/utils/matrix_utils.h:56:13: note: use not simple.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/utils/matrix_utils.h:56:13: note: not ssa-name.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/utils/matrix_utils.h:56:13: note: use not simple.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/utils/matrix_utils.h:56:13: note: can't use a fully-masked loop because an access isn't contiguous.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/utils/matrix_utils.h:56:13: note: not ssa-name.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/utils/matrix_utils.h:56:13: note: use not simple.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/utils/matrix_utils.h:56:13: note: not ssa-name.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/utils/matrix_utils.h:56:13: note: use not simple.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/utils/matrix_utils.h:56:13: note: reduc op not supported by target.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/utils/matrix_utils.h:56:13: note: cost model: the vector iteration cost = 232 divided by the scalar iteration cost = 48 is greater or equal to the vectorization factor = 4.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/utils/matrix_utils.h:56:13: note: not vectorized: vectorization not profitable.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/utils/matrix_utils.h:56:13: note: not vectorized: vector version will never be profitable.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/utils/matrix_utils.h:56:13: note: step unknown.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/utils/matrix_utils.h:56:13: note: Unknown alignment for access: *_127
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/utils/matrix_utils.h:56:13: note: Unknown misalignment, naturally aligned
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/utils/matrix_utils.h:56:13: note: not ssa-name.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/utils/matrix_utils.h:56:13: note: use not simple.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/utils/matrix_utils.h:56:13: note: not ssa-name.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/utils/matrix_utils.h:56:13: note: use not simple.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/utils/matrix_utils.h:56:13: note: can't use a fully-masked loop because an access isn't contiguous.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/utils/matrix_utils.h:56:13: note: not ssa-name.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/utils/matrix_utils.h:56:13: note: use not simple.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/utils/matrix_utils.h:56:13: note: not ssa-name.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/utils/matrix_utils.h:56:13: note: use not simple.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/utils/matrix_utils.h:56:13: note: reduc op not supported by target.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/utils/matrix_utils.h:56:13: note: loop vectorized
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/utils/matrix_utils.h:56:13: note: reduc op not supported by target.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/utils/matrix_utils.h:10:20: note: not vectorized: multiple nested loops.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/utils/matrix_utils.h:10:20: note: bad loop form.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:63:3: note: not vectorized: multiple nested loops.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:63:3: note: bad loop form.
+
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:78:4: note: versioning for alias required: can't determine dependence between *_41 and *_38
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:78:4: note: Unknown misalignment, naturally aligned
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:78:4: note: Unknown misalignment, naturally aligned
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:78:4: note: Unknown misalignment, naturally aligned
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:78:4: note: not ssa-name.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:78:4: note: use not simple.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:78:4: note: not ssa-name.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:78:4: note: use not simple.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:78:4: note: not ssa-name.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:78:4: note: use not simple.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:78:4: note: not ssa-name.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:78:4: note: use not simple.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:78:4: note: loop vectorized
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:78:4: note: loop versioned for vectorization because of possible aliasing
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:72:4: note: versioning for alias required: can't determine dependence between *_27 and *_31
+
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:72:4: note: Unknown misalignment, naturally aligned
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:72:4: note: Unknown misalignment, naturally aligned
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:72:4: note: Unknown misalignment, naturally aligned
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:72:4: note: not ssa-name.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:72:4: note: use not simple.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:72:4: note: not ssa-name.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:72:4: note: use not simple.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:72:4: note: not ssa-name.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:72:4: note: use not simple.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:72:4: note: not ssa-name.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:72:4: note: use not simple.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:72:4: note: loop vectorized
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:72:4: note: loop versioned for vectorization because of possible aliasing
+
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:45:4: note: versioning for alias required: can't determine dependence between *_15 and *_19
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:45:4: note: versioning for alias required: can't determine dependence between *_19 and *_15
+
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:45:4: note: versioning for alias required: can't determine dependence between *_15 and *_19
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:45:4: note: Unknown misalignment, naturally aligned
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:45:4: note: Unknown misalignment, naturally aligned
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:45:4: note: Unknown misalignment, naturally aligned
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:45:4: note: Unknown misalignment, naturally aligned
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:45:4: note: not ssa-name.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:45:4: note: use not simple.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:45:4: note: not ssa-name.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:45:4: note: use not simple.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:45:4: note: not ssa-name.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:45:4: note: use not simple.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:45:4: note: not ssa-name.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:45:4: note: use not simple.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:45:4: note: loop vectorized
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:45:4: note: loop versioned for vectorization because of possible aliasing
+
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:37:4: note: versioning for alias required: can't determine dependence between *_8 and *_10
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:37:4: note: versioning for alias required: can't determine dependence between *_10 and *_8
+
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:37:4: note: versioning for alias required: can't determine dependence between *_8 and *_10
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:37:4: note: Unknown misalignment, naturally aligned
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:37:4: note: Unknown misalignment, naturally aligned
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:37:4: note: Unknown misalignment, naturally aligned
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:37:4: note: Unknown misalignment, naturally aligned
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:37:4: note: not ssa-name.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:37:4: note: use not simple.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:37:4: note: not ssa-name.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:37:4: note: use not simple.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:37:4: note: not ssa-name.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:37:4: note: use not simple.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:37:4: note: not ssa-name.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:37:4: note: use not simple.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:37:4: note: loop vectorized
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:37:4: note: loop versioned for vectorization because of possible aliasing
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:24:3: note: reduction value used in loop.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:24:3: note: Unknown def-use cycle pattern.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:24:3: note: Unknown def-use cycle pattern.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:24:3: note: Unsupported pattern.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:24:3: note: not vectorized: unsupported use in stmt.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:24:3: note: unexpected pattern.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:24:3: note: not vectorized: not enough data-refs in basic block.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:18:2: note: not vectorized: not enough data-refs in basic block.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:18:2: note: not vectorized: not enough data-refs in basic block.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:24:3: note: not vectorized: not enough data-refs in basic block.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:27:7: note: not vectorized: not enough data-refs in basic block.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:24:3: note: not vectorized: not enough data-refs in basic block.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:35:6: note: not vectorized: not enough data-refs in basic block.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/utils/matrix_utils.h:10:16: note: not vectorized: not enough data-refs in basic block.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/utils/matrix_utils.h:10:16: note: not vectorized: not enough data-refs in basic block.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:41:29: note: not vectorized: no vectype for stmt: vect_tmp_75.59_479 = MEM[(double *)vectp.57_477];
+ scalar_type: vector(8) double
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:41:29: note: not vectorized: no vectype for stmt: vect__11.62_484 = MEM[(double *)vectp.60_482];
+ scalar_type: vector(8) double
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:41:29: note: not vectorized: no vectype for stmt: MEM[(double *)vectp.63_487] = vect__11.62_484;
+ scalar_type: vector(8) double
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:41:29: note: not vectorized: no vectype for stmt: MEM[(double *)vectp.65_492] = vect_tmp_75.59_479;
+ scalar_type: vector(8) double
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:41:29: note: not vectorized: no grouped stores in basic block.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:41:29: note: not vectorized: not enough data-refs in basic block.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:37:4: note: not consecutive access tmp_662 = *_661;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:37:4: note: not consecutive access *_661 = _666;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:37:4: note: not consecutive access _666 = *_665;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:37:4: note: not consecutive access *_665 = tmp_662;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:37:4: note: not vectorized: no grouped stores in basic block.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:37:4: note: not consecutive access tmp_675 = *_674;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:37:4: note: not consecutive access *_674 = _679;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:37:4: note: not consecutive access _679 = *_678;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:37:4: note: not consecutive access *_678 = tmp_675;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:37:4: note: not vectorized: no grouped stores in basic block.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:37:4: note: not consecutive access tmp_688 = *_687;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:37:4: note: not consecutive access *_687 = _692;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:37:4: note: not consecutive access _692 = *_691;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:37:4: note: not consecutive access *_691 = tmp_688;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:37:4: note: not vectorized: no grouped stores in basic block.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:37:4: note: not consecutive access tmp_701 = *_700;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:37:4: note: not consecutive access *_700 = _705;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:37:4: note: not consecutive access _705 = *_704;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:37:4: note: not consecutive access *_704 = tmp_701;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:37:4: note: not vectorized: no grouped stores in basic block.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:37:4: note: not consecutive access tmp_714 = *_713;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:37:4: note: not consecutive access *_713 = _718;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:37:4: note: not consecutive access _718 = *_717;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:37:4: note: not consecutive access *_717 = tmp_714;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:37:4: note: not vectorized: no grouped stores in basic block.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:37:4: note: not consecutive access tmp_727 = *_726;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:37:4: note: not consecutive access *_726 = _731;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:37:4: note: not consecutive access _731 = *_730;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:37:4: note: not consecutive access *_730 = tmp_727;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:37:4: note: not vectorized: no grouped stores in basic block.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:37:31: note: not consecutive access tmp_463 = *_462;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:37:31: note: not consecutive access *_462 = _467;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:37:31: note: not consecutive access _467 = *_466;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:37:31: note: not consecutive access *_466 = tmp_463;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:37:31: note: not vectorized: no grouped stores in basic block.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:37:4: note: not consecutive access tmp_448 = *_447;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:37:4: note: not consecutive access *_447 = _452;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:37:4: note: not consecutive access _452 = *_451;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:37:4: note: not consecutive access *_451 = tmp_448;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:37:4: note: not vectorized: no grouped stores in basic block.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:45:4: note: not vectorized: not enough data-refs in basic block.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:45:4: note: not vectorized: not enough data-refs in basic block.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:48:35: note: not vectorized: not enough data-refs in basic block.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:48:35: note: not vectorized: not enough data-refs in basic block.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:49:27: note: not vectorized: no vectype for stmt: vect_tmpb_83.45_409 = MEM[(double *)vectp.43_407];
+ scalar_type: vector(8) double
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:49:27: note: not vectorized: no vectype for stmt: vect__20.48_414 = MEM[(double *)vectp.46_412];
+ scalar_type: vector(8) double
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:49:27: note: not vectorized: no vectype for stmt: MEM[(double *)vectp.49_417] = vect__20.48_414;
+ scalar_type: vector(8) double
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:49:27: note: not vectorized: no vectype for stmt: MEM[(double *)vectp.51_422] = vect_tmpb_83.45_409;
+ scalar_type: vector(8) double
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:49:27: note: not vectorized: no grouped stores in basic block.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:49:27: note: not vectorized: not enough data-refs in basic block.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:45:4: note: not consecutive access tmpb_584 = *_583;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:45:4: note: not consecutive access *_583 = _588;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:45:4: note: not consecutive access _588 = *_587;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:45:4: note: not consecutive access *_587 = tmpb_584;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:45:4: note: not vectorized: no grouped stores in basic block.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:45:4: note: not consecutive access tmpb_597 = *_596;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:45:4: note: not consecutive access *_596 = _601;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:45:4: note: not consecutive access _601 = *_600;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:45:4: note: not consecutive access *_600 = tmpb_597;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:45:4: note: not vectorized: no grouped stores in basic block.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:45:4: note: not consecutive access tmpb_610 = *_609;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:45:4: note: not consecutive access *_609 = _614;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:45:4: note: not consecutive access _614 = *_613;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:45:4: note: not consecutive access *_613 = tmpb_610;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:45:4: note: not vectorized: no grouped stores in basic block.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:45:4: note: not consecutive access tmpb_623 = *_622;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:45:4: note: not consecutive access *_622 = _627;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:45:4: note: not consecutive access _627 = *_626;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:45:4: note: not consecutive access *_626 = tmpb_623;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:45:4: note: not vectorized: no grouped stores in basic block.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:45:4: note: not consecutive access tmpb_636 = *_635;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:45:4: note: not consecutive access *_635 = _640;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:45:4: note: not consecutive access _640 = *_639;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:45:4: note: not consecutive access *_639 = tmpb_636;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:45:4: note: not vectorized: no grouped stores in basic block.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:45:4: note: not consecutive access tmpb_649 = *_648;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:45:4: note: not consecutive access *_648 = _653;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:45:4: note: not consecutive access _653 = *_652;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:45:4: note: not consecutive access *_652 = tmpb_649;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:45:4: note: not vectorized: no grouped stores in basic block.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:45:34: note: not consecutive access tmpb_393 = *_392;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:45:34: note: not consecutive access *_392 = _397;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:45:34: note: not consecutive access _397 = *_396;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:45:34: note: not consecutive access *_396 = tmpb_393;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:45:34: note: not vectorized: no grouped stores in basic block.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:45:4: note: not consecutive access tmpb_378 = *_377;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:45:4: note: not consecutive access *_377 = _382;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:45:4: note: not consecutive access _382 = *_381;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:45:4: note: not consecutive access *_381 = tmpb_378;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:45:4: note: not vectorized: no grouped stores in basic block.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:45:4: note: not vectorized: not enough data-refs in basic block.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:57:6: note: not vectorized: not enough data-refs in basic block.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:63:3: note: not vectorized: not enough data-refs in basic block.
+/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/usr/include/bits/stdio2.h:100:10: note: not vectorized: not enough data-refs in basic block.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:81:29: note: not vectorized: not enough data-refs in basic block.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:72:4: note: not vectorized: not enough data-refs in basic block.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:78:4: note: not vectorized: not enough data-refs in basic block.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:78:4: note: not vectorized: not enough data-refs in basic block.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:78:4: note: not vectorized: not enough data-refs in basic block.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:75:23: note: not vectorized: no vectype for stmt: vect__28.31_284 = MEM[(double *)vectp.29_296];
+ scalar_type: vector(8) double
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:75:23: note: not vectorized: no vectype for stmt: vect__32.35_264 = MEM[(double *)vectp.33_275];
+ scalar_type: vector(8) double
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:75:23: note: not vectorized: no vectype for stmt: MEM[(double *)vectp.37_66] = vect__33.36_260;
+ scalar_type: vector(8) double
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:75:23: note: not vectorized: no grouped stores in basic block.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:75:23: note: not vectorized: not enough data-refs in basic block.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:72:4: note: not consecutive access _505 = *_504;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:72:4: note: not consecutive access *_504 = _506;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:72:4: note: not consecutive access _500 = *_499;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:72:4: note: not vectorized: no grouped stores in basic block.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:72:4: note: not consecutive access _519 = *_518;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:72:4: note: not consecutive access *_518 = _520;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:72:4: note: not consecutive access _514 = *_513;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:72:4: note: not vectorized: no grouped stores in basic block.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:72:4: note: not consecutive access _533 = *_532;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:72:4: note: not consecutive access *_532 = _534;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:72:4: note: not consecutive access _528 = *_527;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:72:4: note: not vectorized: no grouped stores in basic block.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:72:4: note: not consecutive access _547 = *_546;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:72:4: note: not consecutive access *_546 = _548;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:72:4: note: not consecutive access _542 = *_541;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:72:4: note: not vectorized: no grouped stores in basic block.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:72:4: note: not consecutive access _561 = *_560;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:72:4: note: not consecutive access *_560 = _562;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:72:4: note: not consecutive access _556 = *_555;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:72:4: note: not vectorized: no grouped stores in basic block.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:72:4: note: not consecutive access _575 = *_574;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:72:4: note: not consecutive access *_574 = _576;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:72:4: note: not consecutive access _570 = *_569;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:72:4: note: not vectorized: no grouped stores in basic block.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:72:37: note: not consecutive access _313 = *_317;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:72:37: note: not consecutive access *_317 = _312;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:72:37: note: not consecutive access _336 = *_337;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:72:37: note: not vectorized: no grouped stores in basic block.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:72:4: note: not consecutive access _57 = *_58;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:72:4: note: not consecutive access *_58 = _55;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:72:4: note: not consecutive access _63 = *_64;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:72:4: note: not vectorized: no grouped stores in basic block.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:63:3: note: not vectorized: not enough data-refs in basic block.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:80:29: note: not vectorized: not enough data-refs in basic block.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:80:29: note: not vectorized: not enough data-refs in basic block.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:82:19: note: not vectorized: no vectype for stmt: vect__39.17_199 = MEM[(double *)vectp.15_201];
+ scalar_type: vector(8) double
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:82:19: note: not vectorized: no vectype for stmt: vect__42.20_178 = MEM[(double *)vectp.18_187];
+ scalar_type: vector(8) double
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:82:19: note: not vectorized: no vectype for stmt: MEM[(double *)vectp.23_169] = vect__44.22_173;
+ scalar_type: vector(8) double
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:82:19: note: not vectorized: no grouped stores in basic block.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:82:19: note: not vectorized: not enough data-refs in basic block.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:78:4: note: not consecutive access _164 = *_401;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:78:4: note: not consecutive access *_401 = _7;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:78:4: note: not consecutive access _355 = *_154;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:78:4: note: not vectorized: no grouped stores in basic block.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:78:4: note: not consecutive access _26 = *_25;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:78:4: note: not consecutive access *_25 = _30;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:78:4: note: not consecutive access _92 = *_28;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:78:4: note: not vectorized: no grouped stores in basic block.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:78:4: note: not consecutive access _39 = *_38;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:78:4: note: not consecutive access *_38 = _44;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:78:4: note: not consecutive access _42 = *_41;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:78:4: note: not vectorized: no grouped stores in basic block.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:78:4: note: not consecutive access _20 = *_19;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:78:4: note: not consecutive access *_19 = _121;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:78:4: note: not consecutive access _119 = *_118;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:78:4: note: not vectorized: no grouped stores in basic block.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:78:4: note: not consecutive access _132 = *_129;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:78:4: note: not consecutive access *_129 = _195;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:78:4: note: not consecutive access _52 = *_387;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:78:4: note: not vectorized: no grouped stores in basic block.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:78:4: note: not consecutive access _73 = *_6;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:78:4: note: not consecutive access *_6 = _77;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:78:4: note: not consecutive access _74 = *_48;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:78:4: note: not vectorized: no grouped stores in basic block.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:78:34: note: not consecutive access _215 = *_216;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:78:34: note: not consecutive access *_216 = _210;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:78:34: note: not consecutive access _212 = *_213;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:78:34: note: not vectorized: no grouped stores in basic block.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:78:4: note: not consecutive access _230 = *_231;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:78:4: note: not consecutive access *_231 = _225;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:78:4: note: not consecutive access _227 = *_228;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/dgesv.c:78:4: note: not vectorized: no grouped stores in basic block.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/utils/matrix_utils.h:10:16: note: not vectorized: not enough data-refs in basic block.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/utils/matrix_utils.h:10:16: note: not vectorized: not enough data-refs in basic block.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/utils/matrix_utils.h:10:16: note: not vectorized: not enough data-refs in basic block.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/utils/matrix_utils.h:62:26: note: not vectorized: no vectype for stmt: vect_constant_mul_122.7_287 = MEM[(double *)vectp.5_292];
+ scalar_type: vector(2) double
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/utils/matrix_utils.h:62:26: note: not consecutive access _269 = *ivtmp_270;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/utils/matrix_utils.h:62:26: note: not consecutive access _271 = *ivtmp_274;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/utils/matrix_utils.h:62:26: note: not vectorized: no grouped stores in basic block.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/utils/matrix_utils.h:62:26: note: not vectorized: not enough data-refs in basic block.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/utils/matrix_utils.h:56:53: note: not consecutive access constant_mul_327 = *_328;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/utils/matrix_utils.h:56:53: note: not consecutive access constant_resolved_320 = *_321;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/utils/matrix_utils.h:56:53: note: not vectorized: no grouped stores in basic block.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/utils/matrix_utils.h:52:9: note: not consecutive access _138 = *_137;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/utils/matrix_utils.h:52:9: note: not consecutive access *_137 = _141;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/utils/matrix_utils.h:52:9: note: not vectorized: no grouped stores in basic block.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/utils/matrix_utils.h:46:5: note: not vectorized: not enough data-refs in basic block.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/utils/matrix_utils.h:56:13: note: not vectorized: not enough data-refs in basic block.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/utils/matrix_utils.h:56:13: note: not vectorized: not enough data-refs in basic block.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/utils/matrix_utils.h:44:12: note: not vectorized: not enough data-refs in basic block.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/main.c:21:2: note: not vectorized: loop contains function calls or data references that cannot be analyzed
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/main.c:17:29: note: not vectorized: not enough data-refs in basic block.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/main.c:21:2: note: not vectorized: not enough data-refs in basic block.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/main.c:21:2: note: not vectorized: not enough data-refs in basic block.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/main.c:26:9: note: not vectorized: not enough data-refs in basic block.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/main.c:31:30: note: not vectorized: not enough data-refs in basic block.
+/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/usr/include/bits/string_fortified.h:34:10: note: not vectorized: not enough data-refs in basic block.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/main.c:35:9: note: not vectorized: not enough data-refs in basic block.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/main.c:41:21: note: not vectorized: not enough data-refs in basic block.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/main.c:49:32: note: not vectorized: control flow in loop.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/main.c:49:32: note: bad loop form.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/main.c:49:2: note: not vectorized: not enough data-refs in basic block.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/main.c:51:6: note: not consecutive access _26 = *b_13(D);
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/main.c:51:6: note: not consecutive access _28 = *bref_14(D);
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/main.c:51:6: note: not vectorized: no grouped stores in basic block.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/main.c:51:6: note: not consecutive access _4 = *_3;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/main.c:51:6: note: not consecutive access _6 = *_5;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/main.c:51:6: note: not vectorized: no grouped stores in basic block.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/main.c:49:2: note: not vectorized: not enough data-refs in basic block.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/main.c:49:2: note: not vectorized: not enough data-refs in basic block.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/main.c:49:32: note: not vectorized: control flow in loop.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/main.c:49:32: note: bad loop form.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/main.c:60:5: note: not vectorized: not enough data-refs in basic block.
+/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/usr/include/stdlib.h:363:16: note: not vectorized: not enough data-refs in basic block.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/main.c:72:6: note: not vectorized: not enough data-refs in basic block.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/main.c:81:21: note: not vectorized: not enough data-refs in basic block.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/main.c:49:2: note: not vectorized: not enough data-refs in basic block.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/main.c:51:6: note: not consecutive access _58 = *b_15;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/main.c:51:6: note: not consecutive access _60 = *bref_19;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/main.c:51:6: note: not vectorized: no grouped stores in basic block.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/main.c:51:6: note: not consecutive access _38 = *_37;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/main.c:51:6: note: not consecutive access _40 = *_39;
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/main.c:51:6: note: not vectorized: no grouped stores in basic block.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/main.c:49:2: note: not vectorized: not enough data-refs in basic block.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/main.c:58:5: note: not vectorized: not enough data-refs in basic block.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/timer.c:6:58: note: not vectorized: no grouped stores in basic block.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/timer.c:13:62: note: not vectorized: no grouped stores in basic block.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/timer.c:20:60: note: not vectorized: no grouped stores in basic block.
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/HPC_TOOLS/compiler/hpctools/src/timer.c:27:54: note: not vectorized: no grouped stores in basic block.
