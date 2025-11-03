@@ -31,7 +31,7 @@ for compiler_tag, compiler_name in defs.compilers.items():
 
     for o_tag, o_flag in defs.optimization_flags.items():
         for rs_tag, rs_flag in defs.row_swapping.items():
-            output_dir = os.path.join(defs.build_dir, compiler_tag, o_tag)
+            output_dir = os.path.join(defs.vec_build_dir, compiler_tag, o_tag)
 
             output_file = os.path.join(
                 output_dir, f"dgesv{('_' + rs_tag) if rs_tag else ''}"
