@@ -6,9 +6,12 @@ root_dir = os.path.realpath(os.path.join(script_dir, ".."))  # normaliza ../
 
 src_dir = os.path.join(root_dir, "src")
 src_vec_dir = os.path.join(root_dir, "src_vec")
+src_vec_manual_dir = os.path.join(root_dir, "src_vec_manual")
 
 build_dir = os.path.join(root_dir, "build")
 vec_build_dir = os.path.join(root_dir, "vec_build")
+vec_manual_build_dir = os.path.join(root_dir, "vec_manual_build")
+
 
 compilers = {
     "gcc_8_4_0": "gcc-8.4.0",
