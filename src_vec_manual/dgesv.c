@@ -1,13 +1,18 @@
 #include "dgesv.h"
 #include "utils/avx_double.h"
-#include "utils/matrix_utils.h"
 #include <math.h>
 #include <stdint.h>
 #include <stdio.h>
 #include <string.h>
 #include <sys/types.h>
+#ifdef DEBUG
+#include "utils/matrix_utils.h"
+#endif
 
 static const double EPSILON = 1e-10;
+
+static void resolve_triangle_matrix(size_t n, size_t nrhs, double a[restrict n][n],
+									double b[restrict n][nrhs]);
 
 int my_dgesv(size_t n, size_t nrhs, double a[restrict n][n], double b[restrict n][nrhs])
 {
@@ -170,4 +175,41 @@ int my_dgesv(size_t n, size_t nrhs, double a[restrict n][n], double b[restrict n
 #endif
 
 	return 0;
+}
+
+static void resolve_triangle_matrix(size_t n, size_t nrhs, double a[restrict n][n],
+									double b[restrict n][nrhs])
+{
+	size_t n_minus1 = n - 1;
+
+	for (size_t i = 0; i < n; i++) // Row+
+	{
+		size_t row = n_minus1 - i;
+
+		double denominator = a[row][row];
+
+		for (size_t rhs = 0; rhs < nrhs; rhs++)
+		{
+			double constant = 0.0;
+
+			for (size_t j = 0; (j < n) && (j < i);
+				 j++) // Itera solo por los valores resueltos de la constante
+			{
+				size_t col = n_minus1 - j;
+
+				double constant_mul = a[row][col];
+				double constant_resolved = b[col][rhs];
+
+				// Vectorization improvement attempt
+				double multiplied = constant_mul * constant_resolved;
+				constant = constant + multiplied;
+			}
+
+			b[row][rhs] = (b[row][rhs] - constant) / denominator;
+		}
+
+#ifdef DEBUG
+		printf("[B] row(%zu) val(%.5f)\n", row, b[row][0]);
+#endif
+	}
 }

@@ -4,7 +4,7 @@ import os.path as path
 import json
 from statistics import mean
 
-JSON_SUMMARY = "benchmark_summary_1c.json"
+JSON_SUMMARY = "benchmark_summary_1c1.json"
 JSON_PATH = path.join(defs.root_dir, "results/")
 COLUMNS = list(defs.optimization_flags.keys())
 MATRIX_SIZES = ["1024", "2048", "4096"]

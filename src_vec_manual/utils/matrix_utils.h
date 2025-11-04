@@ -39,41 +39,7 @@ static inline void print_vec(double *vec, size_t n)
 	printf("\n");
 }
 
-static inline void resolve_triangle_matrix(size_t n, size_t nrhs, double a[restrict n][n], double b[restrict n][nrhs])
-{
-	size_t n_minus1 = n - 1;
 
-	for (size_t i = 0; i < n; i++) // Row+
-	{
-		size_t row = n_minus1 - i;
-
-		double denominator = a[row][row];
-
-		for (size_t rhs = 0; rhs < nrhs; rhs++)
-		{
-			double constant = 0.0;
-
-			for (size_t j = 0; (j < n) && (j < i);
-				 j++) // Itera solo por los valores resueltos de la constante
-			{
-				size_t col = n_minus1 - j;
-
-				double constant_mul = a[row][col];
-				double constant_resolved = b[col][rhs];
-
-				// Vectorization improvement attempt
-				double multiplied = constant_mul * constant_resolved;
-				constant = constant + multiplied;
-			}
-
-			b[row][rhs] = (b[row][rhs] - constant) / denominator;
-		}
-
-#ifdef DEBUG
-		printf("[B] row(%zu) val(%.5f)\n", row, b[row][0]);
-#endif
-	}
-}
 
 static inline uint32_t compare_results_divergence(size_t n, double *m1, double *m2)
 {

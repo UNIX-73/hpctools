@@ -4,8 +4,8 @@ import pprint
 import statistics
 from tabulate import tabulate
 
-INPUT = "./results/raw/benchmark_results_64c.json"
-OUTPUT = "./results/benchmark_summary_64c.json"
+INPUT = "./results/raw/benchmark_results_1c1.json"
+OUTPUT = "./results/benchmark_summary_1c1.json"
 
 matrix_sizes = ["1024", "2048", "4096"]
 

@@ -43,7 +43,7 @@ for compiler_tag, compiler_name in defs.compilers.items():
             )
 
             cmd = (
-                [compiler_name] + c_files + [o_flag] + " -march=native " + include_flags
+                [compiler_name] + c_files + [o_flag] + ["-march=native"] + include_flags
             )
             if rs_flag:
                 cmd.append(rs_flag)
