@@ -31,6 +31,7 @@ modules = {
     "gcc_11_4_0": "module load cesga/2025",
     "icc": "module load cesga/2022 intel/2023.2.1 openblas imkl",
     "icx": "module load intel/2024.2.1 openblas imkl",
+    "clang": "module load intel/2024.2.1 openblas imkl",
 }
 
 no_vector_flags = "-fno-tree-vectorize -fno-tree-slp-vectorize"
