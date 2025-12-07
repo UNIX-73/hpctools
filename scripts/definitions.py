@@ -44,19 +44,19 @@ optimization_flags = {
     "Ofast": f"-Ofast {vector_flags} {vector_info_flags}",
 }
 
-clangd_no_vector_flags = "-fno-vectorize -fno-slp-vectorize"
-clangd_vector_flags = "-march=native -fvectorize -fslp-vectorize"
-clangd_vector_info_flags = (
+clang_no_vector_flags = "-fno-vectorize -fno-slp-vectorize"
+clang_vector_flags = "-march=native -fvectorize -fslp-vectorize"
+clang_vector_info_flags = (
     "-Rpass=loop-vectorize "
     "-Rpass-missed=loop-vectorize "
     "-Rpass-analysis=loop-vectorize"
 )
-clangd_optimization_flags = {
-    "O0": f"-O0 {clangd_no_vector_flags}",
-    "O1": f"-O1 {clangd_no_vector_flags}",
-    "O2": f"-O2 {clangd_no_vector_flags}",
-    "O3": f"-O3 {clangd_vector_flags} {clangd_vector_info_flags}",
-    "Ofast": f"-Ofast {clangd_vector_flags} {clangd_vector_info_flags}",
+clang_optimization_flags = {
+    "O0": f"-O0 {clang_no_vector_flags}",
+    "O1": f"-O1 {clang_no_vector_flags}",
+    "O2": f"-O2 {clang_no_vector_flags}",
+    "O3": f"-O3 {clang_vector_flags} {clang_vector_info_flags}",
+    "Ofast": f"-Ofast {clang_vector_flags} {clang_vector_info_flags}",
 }
 
 

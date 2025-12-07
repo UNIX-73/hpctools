@@ -34,7 +34,7 @@ for compiler_tag, compiler_name in all_the_compilers.items():
         if compiler_tag == "icx" or compiler_tag == "clang"
         else defs.optimization_flags
     )
-    
+
     for o_tag, o_flag in optimization.items():
         output_dir = os.path.join(defs.vec_build_dir, compiler_tag, o_tag)
 
@@ -49,12 +49,16 @@ for compiler_tag, compiler_name in all_the_compilers.items():
             + include_flags
             + ["-DROW_SWAPPING"]
         )
-        if compiler_tag == "icx" or compiler_tag == "icc":
+        if compiler_tag == "icx" or compiler_tag == "icc" or compiler_tag == "clang":
             if compiler_tag == "icc":
                 cmd += ["-DINTEL_ICC"]
-            else:
+                link_flags = ["-qmkl=sequential", "-lmkl_intel_lp64", "-lm"]
+            if compiler_tag == "icx":
                 cmd += ["-DINTEL_ICX"]
-            link_flags = ["-qmkl=sequential", "-lmkl_intel_lp64", "-lm"]
+                link_flags = ["-qmkl=sequential", "-lmkl_intel_lp64", "-lm"]
+            if compiler_tag == "clang":
+                cmd += ["-DCLANG"]
+                link_flags = ["-lmkl_intel_lp64 -lmkl_sequential -ldl -lmkl_core -lm"]
 
         cmd += ["-o", output_file] + link_flags
 
