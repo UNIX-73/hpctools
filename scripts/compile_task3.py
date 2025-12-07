@@ -58,7 +58,7 @@ for compiler_tag, compiler_name in all_the_compilers.items():
                 link_flags = ["-qmkl=sequential", "-lmkl_intel_lp64", "-lm"]
             if compiler_tag == "clang":
                 cmd += ["-DCLANG"]
-                link_flags = ["-lmkl_intel_lp64 -lmkl_sequential -ldl -lmkl_core -lm"]
+                link_flags = ["-ldl -lm -lopenblas"]
 
         cmd += ["-o", output_file] + link_flags
 
