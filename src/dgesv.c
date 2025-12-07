@@ -1,8 +1,13 @@
 #include "dgesv.h"
-#include "utils/matrix_utils.h"
+
 #include <math.h>
 
+#include "utils/matrix_utils.h"
+
 static const double EPSILON = 1e-10;
+
+static void resolve_triangle_matrix(size_t n, size_t nrhs, double *a,
+									double *b);
 
 int my_dgesv(size_t n, size_t nrhs, double *a, double *b)
 {
@@ -15,35 +20,29 @@ int my_dgesv(size_t n, size_t nrhs, double *a, double *b)
 	print_vec(b, n);
 #endif
 
-	for (size_t col = 0; col < n; col++)
-	{
+	for (size_t col = 0; col < n; col++) {
 #ifdef ROW_SWAPPING
 		// Buscar pivote máximo en la columna
 		size_t piv_row = col;
 		double max_val = fabs(a[m_idx(n, col, col)]);
-		for (size_t row = col + 1; row < n; row++)
-		{
+		for (size_t row = col + 1; row < n; row++) {
 			double val = fabs(a[m_idx(n, row, col)]);
-			if (val > max_val)
-			{
+			if (val > max_val) {
 				max_val = val;
 				piv_row = row;
 			}
 		}
 
 		// Intercambiar filas si es necesario
-		if (piv_row != col)
-		{
-			for (size_t k = 0; k < n; k++)
-			{
+		if (piv_row != col) {
+			for (size_t k = 0; k < n; k++) {
 				double tmp = a[m_idx(n, col, k)];
 				a[m_idx(n, col, k)] = a[m_idx(n, piv_row, k)];
 				a[m_idx(n, piv_row, k)] = tmp;
 			}
 
 			// Intercambiar también B
-			for (size_t j = 0; j < nrhs; j++)
-			{
+			for (size_t j = 0; j < nrhs; j++) {
 				double tmpb = b[col * nrhs + j];
 				b[col * nrhs + j] = b[piv_row * nrhs + j];
 				b[piv_row * nrhs + j] = tmpb;
@@ -54,14 +53,12 @@ int my_dgesv(size_t n, size_t nrhs, double *a, double *b)
 		size_t piv1_i = m_idx(n, col, col);
 		double piv1 = a[piv1_i];
 
-		if (fabs(piv1) < EPSILON)
-		{
+		if (fabs(piv1) < EPSILON) {
 			printf(stderr, "ERR: Almost null pivot in col %ld\n", col);
 			return -1;
 		}
 
-		for (size_t row = col + 1; row < n; row++)
-		{
+		for (size_t row = col + 1; row < n; row++) {
 			double piv2 = a[m_idx(n, row, col)];
 
 			double mul = (piv2 / piv1);
@@ -69,16 +66,14 @@ int my_dgesv(size_t n, size_t nrhs, double *a, double *b)
 			size_t pos_a1_idx = m_idx(n, row, col);
 
 			// a
-			for (size_t i = 0; i < n - col; i++)
-			{
+			for (size_t i = 0; i < n - col; i++) {
 				double result = mul * a[piv1_i + i];
 				a[pos_a1_idx + i] -= result;
 			}
 			// b
-			for (size_t j = 0; j < nrhs; j++)
-			{
-				size_t pos_b1_idx = row * nrhs + j; // idx del row de b
-				size_t pos_b2_idx = col * nrhs + j; // idx del piv de b
+			for (size_t j = 0; j < nrhs; j++) {
+				size_t pos_b1_idx = row * nrhs + j;	 // idx del row de b
+				size_t pos_b2_idx = col * nrhs + j;	 // idx del piv de b
 				b[pos_b1_idx] -= mul * b[pos_b2_idx];
 			}
 		}
@@ -90,8 +85,7 @@ int my_dgesv(size_t n, size_t nrhs, double *a, double *b)
 	print_matrix(a, n);
 
 	printf("b1-->\n");
-	for (size_t i = 0; i < nrhs; i++)
-	{
+	for (size_t i = 0; i < nrhs; i++) {
 		print_vec(&b[n * i], n);
 	}
 
@@ -101,11 +95,43 @@ int my_dgesv(size_t n, size_t nrhs, double *a, double *b)
 
 #ifdef DEBUG
 	printf("b2-->\n");
-	for (size_t i = 0; i < nrhs; i++)
-	{
+	for (size_t i = 0; i < nrhs; i++) {
 		print_vec(&b[n * i], n);
 	}
 #endif
 
 	return 0;
+}
+
+static void resolve_triangle_matrix(size_t n, size_t nrhs, double *a, double *b)
+{
+	size_t n_minus1 = n - 1;
+
+	for (size_t i = 0; i < n; i++)	// Row+
+	{
+		size_t row = n_minus1 - i;
+
+		double denominator = a[m_idx(n, row, row)];
+
+		for (size_t rhs = 0; rhs < nrhs; rhs++) {
+			double constant = 0.0;
+
+			for (size_t j = 0; (j < n) && (j < i);
+				 j++)  // Itera solo por los valores resueltos de la constante
+			{
+				size_t col = n_minus1 - j;
+
+				double constant_mul = a[m_idx(n, row, col)];
+				double constant_resolved = b[m_idx(nrhs, col, rhs)];
+				constant += constant_mul * constant_resolved;
+			}
+
+			b[m_idx(nrhs, row, rhs)] =
+				(b[m_idx(nrhs, row, rhs)] - constant) / denominator;
+		}
+
+#ifdef DEBUG
+		printf("[B] row(%d) val(%.5f)  \n", row, b[row]);
+#endif
+	}
 }

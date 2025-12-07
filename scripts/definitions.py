@@ -18,6 +18,12 @@ compilers = {
     "gcc_10_1_0": "gcc-10.1.0",
     "gcc_11_4_0": "gcc",
 }
+task3_compilers = {
+    "icc": "icc",
+    "icx": "icx",
+    "clang": "clang",
+}
+
 
 modules = {
     "gcc_8_4_0": "module load cesga/2020",
