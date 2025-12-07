@@ -29,7 +29,13 @@ link_flags = ["-lm", "-lopenblas"]
 for compiler_tag, compiler_name in all_the_compilers.items():
     module_cmd = defs.modules.get(compiler_tag)
 
-    for o_tag, o_flag in defs.optimization_flags.items():
+    optimization = (
+        defs.clang_optimization_flags
+        if compiler_tag == "icx" or compiler_tag == "clang"
+        else defs.optimization_flags
+    )
+    
+    for o_tag, o_flag in optimization.items():
         output_dir = os.path.join(defs.vec_build_dir, compiler_tag, o_tag)
 
         output_file = os.path.join(output_dir, "dgesv")

@@ -29,7 +29,7 @@ modules = {
     "gcc_8_4_0": "module load cesga/2020",
     "gcc_10_1_0": "module load cesga/2020",
     "gcc_11_4_0": "module load cesga/2025",
-    "icc": "module load intel/2023.2.1 openblas imkl",
+    "icc": "module load cesga/2022 intel/2023.2.1 openblas imkl",
     "icx": "module load intel/2024.2.1 openblas imkl",
 }
 
@@ -43,6 +43,22 @@ optimization_flags = {
     "O3": f"-O3 {vector_flags} {vector_info_flags}",
     "Ofast": f"-Ofast {vector_flags} {vector_info_flags}",
 }
+
+clangd_no_vector_flags = "-fno-vectorize -fno-slp-vectorize"
+clangd_vector_flags = "-march=native -fvectorize -fslp-vectorize"
+clangd_vector_info_flags = (
+    "-Rpass=loop-vectorize "
+    "-Rpass-missed=loop-vectorize "
+    "-Rpass-analysis=loop-vectorize"
+)
+clangd_optimization_flags = {
+    "O0": f"-O0 {clangd_no_vector_flags}",
+    "O1": f"-O1 {clangd_no_vector_flags}",
+    "O2": f"-O2 {clangd_no_vector_flags}",
+    "O3": f"-O3 {clangd_vector_flags} {clangd_vector_info_flags}",
+    "Ofast": f"-Ofast {clangd_vector_flags} {clangd_vector_info_flags}",
+}
+
 
 row_swapping = {
     "": "",
