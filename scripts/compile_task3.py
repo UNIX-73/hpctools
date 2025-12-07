@@ -3,7 +3,7 @@ import subprocess
 import definitions as defs
 
 
-all_the_compilers = defs.compilers | defs.task3_compilers
+all_the_compilers = defs.task3_compilers | defs.compilers
 
 
 for compiler_tag in all_the_compilers.keys():
@@ -26,7 +26,7 @@ for dirpath, dirnames, filenames in os.walk(defs.src_vec_manual_dir):
 include_flags = [f"-I{d}" for d in include_dirs]
 link_flags = ["-lm", "-lopenblas"]
 
-for compiler_tag, compiler_name in defs.compilers.items():
+for compiler_tag, compiler_name in all_the_compilers.items():
     module_cmd = defs.modules.get(compiler_tag)
 
     for o_tag, o_flag in defs.optimization_flags.items():
@@ -35,7 +35,14 @@ for compiler_tag, compiler_name in defs.compilers.items():
         output_file = os.path.join(output_dir, "dgesv")
         log_file = os.path.join(output_dir, f"compile_logs.log")
 
-        cmd = [compiler_name] + c_files + [o_flag] + ["-march=native"] + include_flags + ["-DROW_SWAPPING"]
+        cmd = (
+            [compiler_name]
+            + c_files
+            + [o_flag]
+            + ["-march=native"]
+            + include_flags
+            + ["-DROW_SWAPPING"]
+        )
         cmd += ["-o", output_file] + link_flags
 
         print("Compiling binary:", " ".join(cmd))
@@ -50,16 +57,18 @@ for compiler_tag, compiler_name in defs.compilers.items():
         subprocess.run(["bash", "-lc", full_cmd], check=True)
 
         # asm
-        asm_dir = os.path.join(
-            output_dir, "asm", "dgesv"
-        )
+        asm_dir = os.path.join(output_dir, "asm", "dgesv")
         os.makedirs(asm_dir, exist_ok=True)
 
         for c_file in c_files:
             base_name = os.path.splitext(os.path.basename(c_file))[0]
             asm_file = os.path.join(asm_dir, f"{base_name}.S")
 
-            s_cmd = [compiler_name, "-S", c_file, o_flag] + include_flags + ["-DROW_SWAPPING"]
+            s_cmd = (
+                [compiler_name, "-S", c_file, o_flag]
+                + include_flags
+                + ["-DROW_SWAPPING"]
+            )
             s_cmd += ["-o", asm_file]
 
             print("Generating .S:", " ".join(s_cmd))
