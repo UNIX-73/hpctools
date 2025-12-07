@@ -1,6 +1,8 @@
 // #include <lapacke.h>
 
-#ifdef INTEL
+#ifdef INTEL_ICC
+#include <lapacke.h>
+#elif defined(INTEL_ICX)
 #include <mkl_lapacke.h>
 #else
 #include <openblas/lapacke.h>

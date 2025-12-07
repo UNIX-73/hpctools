@@ -44,8 +44,11 @@ for compiler_tag, compiler_name in all_the_compilers.items():
             + ["-DROW_SWAPPING"]
         )
         if compiler_tag == "icx" or compiler_tag == "icc":
-            cmd += ["-DINTEL"]
-            link_flags = ["-qmkl=sequential" "-lmkl_intel_lp64", "-lm"]
+            if compiler_tag == "icc":
+                cmd += ["-DINTEL_ICC"]
+            else:
+                cmd += ["-DINTEL_ICX"]
+            link_flags = ["-qmkl=sequential", "-lmkl_intel_lp64", "-lm"]
 
         cmd += ["-o", output_file] + link_flags
 
@@ -57,7 +60,7 @@ for compiler_tag, compiler_name in all_the_compilers.items():
                 f"module purge && {module_cmd} && {' '.join(cmd)} > {log_file} 2>&1"
             )
         else:
-            full_cmd = f"module purge && {' '.join(cmd)} > {log_file} 2>&1"
+            full_cmd = f"module --force purge && {' '.join(cmd)} > {log_file} 2>&1"
 
         # compile standard
         subprocess.run(["bash", "-lc", full_cmd], check=True)
