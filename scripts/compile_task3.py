@@ -43,15 +43,21 @@ for compiler_tag, compiler_name in all_the_compilers.items():
             + include_flags
             + ["-DROW_SWAPPING"]
         )
+        if compiler_tag == "icx" or compiler_tag == "icc":
+            cmd += ["-DINTEL"]
+            link_flags = ["-qmkl=sequential" "-lmkl_intel_lp64", "-lm"]
+
         cmd += ["-o", output_file] + link_flags
 
         print("Compiling binary:", " ".join(cmd))
 
         full_cmd = None
         if module_cmd:
-            full_cmd = f"{module_cmd} && {' '.join(cmd)} > {log_file} 2>&1"
+            full_cmd = (
+                f"module purge && {module_cmd} && {' '.join(cmd)} > {log_file} 2>&1"
+            )
         else:
-            full_cmd = f"{' '.join(cmd)} > {log_file} 2>&1"
+            full_cmd = f"module purge && {' '.join(cmd)} > {log_file} 2>&1"
 
         # compile standard
         subprocess.run(["bash", "-lc", full_cmd], check=True)

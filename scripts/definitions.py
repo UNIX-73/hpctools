@@ -29,6 +29,8 @@ modules = {
     "gcc_8_4_0": "module load cesga/2020",
     "gcc_10_1_0": "module load cesga/2020",
     "gcc_11_4_0": "module load cesga/2025",
+    "icc": "module load cesga/2025 intel/2023.2.1",
+    "icx": "module load cesga/2025 intel/2024.2.1",
 }
 
 no_vector_flags = "-fno-tree-vectorize -fno-tree-slp-vectorize"

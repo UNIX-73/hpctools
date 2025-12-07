@@ -1,13 +1,19 @@
 // #include <lapacke.h>
+
+#ifdef INTEL
+#include <mkl_lapacke.h>
+#else
 #include <openblas/lapacke.h>
-// #include <mkl_lapacke.h>
-#include "dgesv.h"
-#include "timer.h"
+#endif
+
 #include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
+
+#include "dgesv.h"
+#include "timer.h"
 
 double *generate_matrix(unsigned int size, unsigned int seed)
 {
@@ -16,8 +22,7 @@ double *generate_matrix(unsigned int size, unsigned int seed)
 
 	srand(seed);
 
-	for (i = 0; i < size * size; i++)
-	{
+	for (i = 0; i < size * size; i++) {
 		matrix[i] = rand() % 100;
 	}
 
@@ -44,10 +49,8 @@ unsigned int check_result(double *bref, double *b, unsigned int size)
 {
 	unsigned int i;
 
-	for (i = 0; i < size * size; i++)
-	{
-		if (!is_nearly_equal(bref[i], b[i]))
-			return 0;
+	for (i = 0; i < size * size; i++) {
+		if (!is_nearly_equal(bref[i], b[i])) return 0;
 	}
 
 	return 1;
@@ -55,9 +58,10 @@ unsigned int check_result(double *bref, double *b, unsigned int size)
 
 int main(int argc, char *argv[])
 {
-	if (argc < 2)
-	{
-		printf("You need to provide a matrix size (e.g. 1024 for use 1024x1024 matrices)\n");
+	if (argc < 2) {
+		printf(
+			"You need to provide a matrix size (e.g. 1024 for use 1024x1024 "
+			"matrices)\n");
 
 		return 1;
 	}
@@ -108,8 +112,7 @@ int main(int argc, char *argv[])
 
 	if (check_result(bref, b, size) == 1)
 		printf("Result is ok!\n");
-	else
-	{
+	else {
 		printf("Result is wrong!\n");
 
 #ifdef EXTRA_TESTING
