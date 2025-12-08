@@ -4,8 +4,10 @@ import pprint
 import statistics
 from tabulate import tabulate
 
-INPUT = "./results/raw/benchmark_results_1c1.json"
-OUTPUT = "./results/benchmark_summary_1c1.json"
+INPUT = "./results/raw/benchmark_results_1c_task3.json"
+OUTPUT = "./results/benchmark_summary_1c_task3.json"
+COMPILERS = defs.compilers | defs.task3_compilers
+
 
 matrix_sizes = ["1024", "2048", "4096"]
 
@@ -13,7 +15,7 @@ results = {}
 with open(INPUT, "r") as f:
     data = json.load(f)
 
-    for compiler in defs.compilers.keys():
+    for compiler in COMPILERS.keys():
         results[compiler] = {}
         for optimization in defs.optimization_flags.keys():
             results[compiler][optimization] = {}
@@ -24,9 +26,7 @@ with open(INPUT, "r") as f:
                 my_dgesv_times = []
 
                 for iter in range(5):
-                    times = data[compiler][optimization]["dgesv_rs"][m_size][iter][
-                        "times"
-                    ]
+                    times = data[compiler][optimization]["dgesv"][m_size][iter]["times"]
 
                     dgesv_times.append(times["Lapacke dgesv"])
                     my_dgesv_times.append(times["my dgesv solver"])
