@@ -1,15 +1,7 @@
 #include "dgesv.h"
 
 #include <math.h>
-#include <stdint.h>
 #include <stdio.h>
-#include <string.h>
-#include <sys/types.h>
-
-#include "utils/avx_double.h"
-#ifdef DEBUG
-#include "utils/matrix_utils.h"
-#endif
 
 static const double EPSILON = 1e-10;
 
@@ -18,10 +10,8 @@ static void resolve_triangle_matrix(size_t n, size_t nrhs,
 									double b[restrict n][nrhs]);
 
 int my_dgesv(size_t n, size_t nrhs, double a[restrict n][n],
-			 double b[restrict n][nrhs])
+			 double b[restrict nrhs][nrhs])
 {
-	printf("Vector instruction support: %s\n", VEC_NAME);
-
 #ifdef DEBUG
 	printf("a -->\n");
 	print_matrix((double *)a, n);
@@ -64,74 +54,10 @@ int my_dgesv(size_t n, size_t nrhs, double a[restrict n][n],
 		double piv1 = a[col][col];
 
 		if (fabs(piv1) < EPSILON) {
-			fprintf(stderr, "ERR: Almost null pivot in col %zu\n", col);
+			printf("ERR: Almost null pivot in col %ld\n", col);
 			return -1;
 		}
 
-#if VEC_BYTES > 1
-		for (size_t row = col + 1; row < n; row++) {
-			double piv2 = a[row][col];
-			double mul = piv2 / piv1;
-
-			double_vec mul_vec = vec_set1(mul);
-
-			// a
-			double *a_col_ptr = &a[col][col];
-			double *a_row_ptr = &a[row][col];
-
-			size_t i = col;
-
-			for (; i + VEC_DOUBLE_LEN <= n; i += VEC_DOUBLE_LEN) {
-				// mul_result = mul * a[col][i]
-				double_vec a_col_vec = vec_loadu(a_col_ptr);
-				double_vec mul_result = vec_mul(mul_vec, a_col_vec);
-
-				// sub_result = a[row][i] - mul_result
-				double_vec a_row_vec = vec_loadu(a_row_ptr);
-				double_vec sub_result = vec_sub(a_row_vec, mul_result);
-
-				// store value on matrix
-				vec_storeu(a_row_ptr, sub_result);
-
-				a_col_ptr += VEC_DOUBLE_LEN;
-				a_row_ptr += VEC_DOUBLE_LEN;
-			}
-			// standard scalar operations for remaining values
-			for (; i < n; i++) {
-				*a_row_ptr -= mul * (*a_col_ptr);
-
-				a_col_ptr++;
-				a_row_ptr++;
-			}
-
-			// b
-			double *b_col_ptr = &b[col][0];
-			double *b_row_ptr = &b[row][0];
-
-			size_t j = 0;
-			for (; j + VEC_DOUBLE_LEN <= nrhs; j += VEC_DOUBLE_LEN) {
-				double_vec b_col_vec = vec_loadu(b_col_ptr);
-				double_vec mul_result = vec_mul(mul_vec, b_col_vec);
-
-				double_vec b_row_vec = vec_loadu(b_row_ptr);
-				double_vec sub_result = vec_sub(b_row_vec, mul_result);
-
-				vec_storeu(b_row_ptr, sub_result);
-
-				b_col_ptr += VEC_DOUBLE_LEN;
-				b_row_ptr += VEC_DOUBLE_LEN;
-			}
-
-			for (; j < nrhs; j++) {
-				*b_row_ptr -= mul * (*b_col_ptr);
-
-				b_col_ptr++;
-				b_row_ptr++;
-			}
-		}
-	}
-
-#else
 		for (size_t row = col + 1; row < n; row++) {
 			double piv2 = a[row][col];
 			double mul = piv2 / piv1;
@@ -142,8 +68,7 @@ int my_dgesv(size_t n, size_t nrhs, double a[restrict n][n],
 			// b
 			for (size_t j = 0; j < nrhs; j++) b[row][j] -= mul * b[col][j];
 		}
-
-#endif
+	}
 
 #ifdef DEBUG
 	printf("nrhs(%zu)\n", nrhs);
@@ -179,17 +104,13 @@ static void resolve_triangle_matrix(size_t n, size_t nrhs,
 		for (size_t rhs = 0; rhs < nrhs; rhs++) {
 			double constant = 0.0;
 
-			for (size_t j = 0; (j < n) && (j < i);
-				 j++)  // Itera solo por los valores resueltos de la constante
-			{
-				size_t col = n_minus1 - j;
+			size_t col_start = n - i;
 
+			for (size_t col = col_start; col < n; col++) {
 				double constant_mul = a[row][col];
 				double constant_resolved = b[col][rhs];
 
-				// Vectorization improvement attempt
-				double multiplied = constant_mul * constant_resolved;
-				constant = constant + multiplied;
+				constant += constant_mul * constant_resolved;
 			}
 
 			b[row][rhs] = (b[row][rhs] - constant) / denominator;

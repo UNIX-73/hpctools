@@ -4,8 +4,10 @@ import os.path as path
 import json
 from statistics import mean
 
-JSON_SUMMARY = "benchmark_summary_1c_task3.json"
-JSON_PATH = path.join(defs.root_dir, "results/")
+COMPILER = "gcc_10_1_0"
+
+JSON_SUMMARY = f"benchmark_summary_{COMPILER}.json"
+JSON_PATH = path.join(defs.root_dir, "results/task3/")
 COLUMNS = list(defs.optimization_flags.keys())
 MATRIX_SIZES = ["1024", "2048", "4096"]
 

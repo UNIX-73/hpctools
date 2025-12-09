@@ -4,8 +4,10 @@ import pprint
 import statistics
 from tabulate import tabulate
 
-INPUT = "./results/raw/benchmark_results_1c_task3.json"
-OUTPUT = "./results/benchmark_summary_1c_task3.json"
+COMPILER = "icx"
+
+INPUT = f"./results/task3/benchmark_results_{COMPILER}.json"
+OUTPUT = f"./results/task3/benchmark_summary_{COMPILER}.json"
 COMPILERS = defs.compilers | defs.task3_compilers
 
 
@@ -16,26 +18,29 @@ with open(INPUT, "r") as f:
     data = json.load(f)
 
     for compiler in COMPILERS.keys():
-        results[compiler] = {}
-        for optimization in defs.optimization_flags.keys():
-            results[compiler][optimization] = {}
-            for m_size in matrix_sizes:
-                results[compiler][optimization][m_size] = {}
+        if data.get(compiler):
+            results[compiler] = {}
+            for optimization in defs.optimization_flags.keys():
+                results[compiler][optimization] = {}
+                for m_size in matrix_sizes:
+                    results[compiler][optimization][m_size] = {}
 
-                dgesv_times = []
-                my_dgesv_times = []
+                    dgesv_times = []
+                    my_dgesv_times = []
 
-                for iter in range(5):
-                    times = data[compiler][optimization]["dgesv"][m_size][iter]["times"]
+                    for iter in range(5):
+                        times = data[compiler][optimization]["dgesv"][m_size][iter][
+                            "times"
+                        ]
 
-                    dgesv_times.append(times["Lapacke dgesv"])
-                    my_dgesv_times.append(times["my dgesv solver"])
+                        dgesv_times.append(times["Lapacke dgesv"])
+                        my_dgesv_times.append(times["my dgesv solver"])
 
-                res = round(statistics.median(dgesv_times) / 1000, 3)
-                results[compiler][optimization][m_size]["dgesv"] = res
+                    res = round(statistics.median(dgesv_times) / 1000, 3)
+                    results[compiler][optimization][m_size]["dgesv"] = res
 
-                res = round(statistics.median(my_dgesv_times) / 1000, 3)
-                results[compiler][optimization][m_size]["my_dgesv"] = res
+                    res = round(statistics.median(my_dgesv_times) / 1000, 3)
+                    results[compiler][optimization][m_size]["my_dgesv"] = res
 
 pprint.pprint(results)
 with open(OUTPUT, "w") as outfile:
