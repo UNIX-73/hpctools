@@ -57,6 +57,7 @@ def run_benchmark(exe_path, compiler_tag, o_tag, exe_name, m_size, iteration):
 
 compilers = defs.task3_compilers | defs.compilers
 
+
 for compiler_tag in compilers.keys():
     for o_tag in defs.optimization_flags.keys():
 

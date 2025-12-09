@@ -15,7 +15,7 @@ for compiler_tag in all_the_compilers.keys():
 
 c_files = []
 include_dirs = set()
-for dirpath, dirnames, filenames in os.walk(defs.src_vec_manual_dir):
+for dirpath, dirnames, filenames in os.walk(defs.src_vec_dir):
     for filename in filenames:
         full_path = os.path.realpath(os.path.join(dirpath, filename))
         if filename.endswith(".c"):
