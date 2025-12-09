@@ -89,6 +89,7 @@ int my_dgesv(size_t n, size_t nrhs, double a[restrict n][n],
 	return 0;
 }
 
+// FIXME: segfault
 static void resolve_triangle_matrix(size_t n, size_t nrhs,
 									double a[restrict n][n],
 									double b[restrict n][nrhs])
